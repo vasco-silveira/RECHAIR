@@ -1,3 +1,3 @@
 class Institution < ApplicationRecord
-  belongs_to :course
+  has_many :course
 end
