@@ -1,0 +1,16 @@
+<h1>Check that route is working</h1>
+
+<div class="container">
+  <div class="row">
+    <% @courses.each do |course| %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card-product">
+          <img src="<%= course.image_url %>">
+            <h4><%= link_to course.title, course_path(course) %></h4>
+            <p><%= course.description %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
