@@ -13,14 +13,22 @@
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: white;
+  color: $white;
+  &:hover {
+    color: $light_blue;
+  }
 }
 
 .navbar-light .navbar-nav .active > .nav-link {
-  color: white;
-
+  color: $white;
+  &:hover {
+    color: $light_blue;
+  }
 }
 
 .avatar{
-  color: white
+  color: $white
+  &:hover {
+    color: $light_blue;
+  }
 }
