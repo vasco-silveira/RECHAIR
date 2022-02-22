@@ -1,7 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
   background-image: url('https://www.hoteldonandres.com/wp-content/uploads/2016/10/blackboard.jpg');
-  background-color: black;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -17,6 +16,10 @@
   &:hover {
     color: $light_blue;
   }
+}
+
+.container-navbar {
+  padding: 0px 100px 0px 100px;
 }
 
 .navbar-light .navbar-nav .active > .nav-link {
