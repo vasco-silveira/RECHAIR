@@ -19,6 +19,10 @@
   }
 }
 
+.container-navbar {
+  padding: 0px 100px 0px 100px;
+}
+
 .navbar-light .navbar-nav .active > .nav-link {
   color: $white;
   &:hover {
