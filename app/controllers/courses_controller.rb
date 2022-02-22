@@ -11,11 +11,16 @@ class CoursesController < ApplicationController
     @courses = Course.all
   end
 
-  # private
+  def show
+    @course = Course.find(params[:id])
+    @booking = Booking.new
+  end
+
+  private
   
-  # def course_params
-  #   params.require(:game).permit(:professor, :title, :description, :subject, :price, :start_date, :end_date, :rating)
-  # end
+  def course_params
+    params.require(:game).permit(:professor, :title, :description, :subject, :price, :start_date, :end_date, :rating)
+  end
 
   # def set_user
   #   @user = current_user
