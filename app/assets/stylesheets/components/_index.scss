@@ -2,3 +2,15 @@
 @import "alert";
 @import "avatar";
 @import "navbar";
+@import "card";
+
+.container-fluid {
+  padding: 30px;
+}
+  
+.container-fluid h1 {
+  text-align: center;
+}
+.container-fluid h3 {
+  text-align: center;
+}
