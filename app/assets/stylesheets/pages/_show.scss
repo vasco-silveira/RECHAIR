@@ -1,0 +1,27 @@
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.course-img {
+  height: 80%;
+  width: 80%;
+  object-fit: cover;
+}
+
+.info-section {
+display: flex;
+justify-content: space-between;
+}
+
+.booking-btn {
+padding-right: 50px;
+}
+
+.course-page-title {
+padding-top: 20px;
+display: flex;
+justify-items: flex-start;
+}
