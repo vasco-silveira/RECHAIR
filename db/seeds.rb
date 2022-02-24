@@ -37,7 +37,7 @@ Institution.create!(
 )
 
 Course.create(
-  professor: "Nicholas Spire"
+  professor: "Nicholas Spire",
   title: "Studio 1.1",
   description: "This unit establishes the principles and skills in research, analysis, argument and representation that support an understanding of architectural design.",
   subject: "Architecture",
@@ -50,7 +50,7 @@ Course.create(
 )
 
 Course.create(
-  professor: "Victor Bauhaus"
+  professor: "Victor Bauhaus",
   title: "Humanities 3",
   description: "This unit develops knowledge and understanding of the historical, cultural and professional contexts for architectural design and extends skills in research,analysis, academic writing and visual representation.",
   subject: "Architecture",
@@ -63,7 +63,7 @@ Course.create(
 )
 
 Course.create(
-  professor: "Melody Spencer"
+  professor: "Melody Spencer",
   title: "Music in Context",
   description: "Students are inspired to contextualise, review, and diversify their knowledge of Western art music and related music traditions through weekly lectures on a range of works, narratives, and moments of historical and cultural significance.",
   subject: "Music",
@@ -76,7 +76,7 @@ Course.create(
 )
 
 Course.create(
-  professor: "Johnny B Goode"
+  professor: "Johnny B Goode",
   title: "Performance",
   description: "Learn how to critically evaluate and perform a diverse range of repertoire, inspiring a cultural connection between historic, contemporary and progressive material. Development of your own musical voice is encouraged through the composition, production and performance of original material.",
   subject: "Music",
@@ -89,7 +89,7 @@ Course.create(
 )
 
 Course.create(
-  professor: "Henry Rubicon"
+  professor: "Henry Rubicon",
   title: "Case Studies in Global History",
   description: "This unit examines key themes and sources for the study of history in a global context. Students can explore an areas related to their potential bracketed award so topics and subjects on offer can vary year to year.",
   subject: "History",
@@ -102,7 +102,7 @@ Course.create(
 )
 
 Course.create(
-  professor: "Stats McStatterton"
+  professor: "Stats McStatterton",
   title: "Probability Theory and Statistics",
   description: "This unit teaches you basic statistics in a style that will prepare you for second year work, making use of relevant statistical software. It covers descriptive statistics, probability and statistical applications.",
   subject: "Mathematics",
@@ -115,7 +115,7 @@ Course.create(
 )
 
 Course.create(
-  professor: "James Urban"
+  professor: "James Urban",
   title: "Researching the City",
   description: "This unit will develop urban field-based methods and techniques for human geographers.",
   subject: "Human Geography",
@@ -128,7 +128,7 @@ Course.create(
 )
 
 Course.create(
-  professor: "Neville D'Audit"
+  professor: "Neville D'Audit",
   title: "Quantitative Methods for Accounting and Finance",
   description: "The course aims to allow students to understand quantitative and statistical modelling and analytical techniques to a level necessary for quantitative finance.",
   subject: "Accounting",
@@ -141,7 +141,7 @@ Course.create(
 )
 
 Course.create(
-  professor: "Silvia Greyscale"
+  professor: "Silvia Greyscale",
   title: "Introduction to Early and Classical Cinema",
   description: "This course provides students with a grounding in the origins of film as a creative medium and introduces them to major developments in early and classical film history.",
   subject: "Drama and English Literature",
