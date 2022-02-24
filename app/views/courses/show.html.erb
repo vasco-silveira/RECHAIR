@@ -1,1 +1,40 @@
-<h1>Test</h1>
+<div class="container-fluid">
+  <section>
+    <div>
+      <img class="image-fluid" src="<%= @course.image_url %>">
+    </div>
+  </section>
+
+
+  <div>
+    <h3> <%= @course.title %> </h3>
+    <%# <h2> <%= @institution.name </h2> %>
+  </div>
+
+  <hr>
+
+  <div class="info-section">
+    <div class="course-details-section">
+      <p> <b>Professor:</b> <%= @course.professor %> </p>
+      <p> <b>Subject:</b> <%= @course.subject %> </p>
+      <p> <b>Start date:</b> <%= @course.start_date %> </p>
+      <p> <b>End date:</b> <%= @course.end_date %> </p>
+      <p> <b>Price:</b> £<%= @course.price %> </p>
+      <p> <b>Course rating:</b> <%= @course.rating %> </p>
+    </div>
+
+    <div class="booking-btn">
+      <%= simple_form_for [@course, @booking] do |f| %>
+        <%= f.submit "Reserve Chair", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="description-section">
+    <p> <b>Description:</b> </p>
+    <p> <%= @course.description %> </p>
+  </div>
+
+</div>
