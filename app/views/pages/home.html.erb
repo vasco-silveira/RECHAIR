@@ -4,6 +4,8 @@
   <div class="banner-content">
     <h1><span class=red>Re</span>Chair</h1>
     <p>Every chair is an opportunity</p>
-    <a class="btn btn-primary btn-lg">Book here</a>
-  </div>
+    <%= form_with url: "courses", method: :get do |form| %>
+    <%= form.text_field :query, placeholder: "Search for courses" %>
+    <%= form.submit "Go!", class: "btn btn-primary btn-lg" %>
+<% end %>
 </div>
