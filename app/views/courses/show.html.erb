@@ -24,7 +24,7 @@
     </div>
 
     <div class="booking-btn">
-      <%= simple_form_for [@course, @booking] do |f| %>
+      <%= simple_form_for [@course, Booking.new] do |f| %>
         <%= f.submit "Reserve Chair", class: "btn btn-primary" %>
       <% end %>
     </div>
