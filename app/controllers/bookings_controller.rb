@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(booking_params)
+    @booking = Booking.new(params[:course])
     @course = Course.find(params[:course_id])
     @booking.user = current_user
     @booking.course = @course
@@ -38,9 +38,9 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
   end
 
-  def booking_params
-    params.require(:booking).permit(:course_id, :user_id)
-  end
+  # def booking_params
+  #   params.require(:booking).permit(:course_id, :user_id)
+  # end
 
   def set_user
     if user_signed_in?
