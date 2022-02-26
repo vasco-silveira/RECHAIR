@@ -1,1 +1,8 @@
 <h2>Chairs booked</h2>
+
+<div>
+  <% @bookings.each do |b| %>
+    <%= b.course.start_date %>
+  <% end %>
+
+</div>
