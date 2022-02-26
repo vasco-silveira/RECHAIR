@@ -3,4 +3,9 @@ class PagesController < ApplicationController
   def home
     # random coment
   end
+
+  def profile
+    @user = current_user
+    @booking = Booking.where(user: current_user)
+  end
 end
