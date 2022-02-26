@@ -3,12 +3,12 @@ class CoursesController < ApplicationController
 
   def index
     # Add the folli=owing lines of code when we implement a search bar
-    # if params[:query].present?
-    #   @courses = Course.where("title ILIKE ?", "%#{params[:query]}%")
-    # else
-    #   @courses = Course.all
-    # end
-    @courses = Course.all
+    if params[:query].present?
+      @courses = Course.where("title ILIKE ?", "%#{params[:query]}%")
+    else
+      @courses = Course.all
+    end
+    # @courses = Course.all
   end
 
   def show
@@ -17,7 +17,7 @@ class CoursesController < ApplicationController
   end
 
   private
-  
+
   def course_params
     params.require(:game).permit(:professor, :title, :description, :subject, :price, :start_date, :end_date, :rating)
   end
