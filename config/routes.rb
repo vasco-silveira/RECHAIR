@@ -6,6 +6,6 @@ Rails.application.routes.draw do
     resources :bookings, only: [ :new, :create ]
   end
   resources :bookings, only: [ :index, :show, :edit, :update, :destroy ]
-  resources :pages, only: [ :index ]
+  resources :pages, only: [ :index, :edit, :update ]
   get 'profile', to: 'pages#profile'
 end
