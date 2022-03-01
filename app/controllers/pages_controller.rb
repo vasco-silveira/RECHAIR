@@ -8,4 +8,9 @@ class PagesController < ApplicationController
     @user = current_user
     @bookings = current_user.bookings
   end
+
+  def edit
+    @user = current_user
+  end
+
 end
