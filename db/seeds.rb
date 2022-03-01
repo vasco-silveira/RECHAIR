@@ -3,6 +3,8 @@
 
 10.times do
   User.create(
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
     email: Faker::Internet.email,
     password: '123456789'
   )
@@ -37,8 +39,164 @@ Institution.create!(
 )
 
 Course.create(
+  professor: Faker::Name.name,
+  title: 'Lady Gaga and the Sociology of Fame',
+  description: "The central objective is to unravel some of the sociologically relevant dimensions of the fame of Lady Gaga.",
+  subject: 'Sociology',
+  image_url: "https://bestlifeonline.com/wp-content/uploads/sites/3/2017/06/Lady-Gaga.jpg?resize=768,586&quality=82&strip=all",
+  price: 150,
+  start_date: Faker::Date.in_date_period,
+  end_date: Faker::Date.in_date_period(year: 2023, month: 6),
+  rating: [1, 2, 3, 4, 5].sample,
+  institution_id: 4
+)
+
+Course.create(
+  professor: Faker::Name.name,
+  title: "The Physics of Star Trek",
+  description: "If you're ever wondered whether or not the USS Enterprise would have actually been capable of flight, Santa Clara University might be the school for you.",
+  subject: "Physics",
+  image_url: "https://bestlifeonline.com/wp-content/uploads/sites/3/2017/12/C-RfRYNXYAA9tHL.jpg?resize=768,576&quality=82&strip=all",
+  price: 150,
+  start_date: Faker::Date.in_date_period,
+  end_date: Faker::Date.in_date_period(year: 2023, month: 6),
+  rating: [1, 2, 3, 4, 5].sample,
+  institution_id: 4
+)
+
+Course.create(
+  professor: Faker::Name.name,
+  title: 'Planetary Science',
+  description: 'This class focuses on everything regarding space. With a particular focus on the solar system and extraterrestrial material, space missions and the technology used, this class will be sure to keep you engaged.',
+  subject: 'Physics',
+  image_url: 'https://oneclassblog.com/wp-content/uploads/2018/12/space-54999_640-1.jpg',
+  price: 150,
+  start_date: Faker::Date.in_date_period,
+  end_date: Faker::Date.in_date_period(year: 2023, month: 6),
+  rating: [1, 2, 3, 4, 5].sample,
+  institution_id: 4
+)
+
+Course.create(
+  professor: Faker::Name.name,
+  title: 'Amateur Cinema',
+  description: 'Combining research and history of amateur cinema, this class will give students an in-depth knowledge of key pieces, frameworks and the culture behind amateur films. It will also touch on the relationship between professional and amateur, and the movements surrounding them.',
+  subject: 'Arts',
+  image_url: 'https://i1.wp.com/oneclassblog.com/wp-content/uploads/2018/12/film-1668918_1920-2.jpg?fit=840%2C374&ssl=1' ,
+  price: 150,
+  start_date: Faker::Date.in_date_period,
+  end_date: Faker::Date.in_date_period(year: 2023, month: 6),
+  rating: [1, 2, 3, 4, 5].sample,
+  institution_id: 4
+)
+
+Course.create(
+  professor: Faker::Name.name,
+  title: 'The Genre Bending Art of Essaying',
+  description: 'This class will be sure to change your perception of essay writing, maybe even help you develop and enjoy writing them. With a combination of research and workshops, this module is a really interesting take on traditional creative writing topics.',
+  subject: 'Arts',
+  image_url: 'https://oneclassblog.com/wp-content/uploads/2018/12/business-1868015_1920-1-1024x683.jpg',
+  price: 150,
+  start_date: Faker::Date.in_date_period,
+  end_date: Faker::Date.in_date_period(year: 2023, month: 6),
+  rating: [1, 2, 3, 4, 5].sample,
+  institution_id: 4
+)
+
+Course.create(
+  professor: Faker::Name.name,
+  title: 'Roman Satire',
+  description: "A new way to look at Latin writing and Roman history. Satire is a unique literary genre that was shaped by two Latin poets. We won't give too much away - that's what the course is for." ,
+  subject: 'Arts',
+  image_url: 'https://oneclassblog.com/wp-content/uploads/2018/12/book-419589_1920-1024x741.jpg',
+  price: 150,
+  start_date: Faker::Date.in_date_period,
+  end_date: Faker::Date.in_date_period(year: 2023, month: 6),
+  rating: [1, 2, 3, 4, 5].sample,
+  institution_id: 4
+)
+
+Course.create(
+  professor: Faker::Name.name,
+  title: 'Asian Cities',
+  description: "An exciting module that displays up to 60 real estate development case studies to the students. Through site visits, presentations and workshops, students will develop new skills and offer solutions. With time spent in Hong Kong, Singapore, Beijing, Tokyo, Seoul and Shanghai, this is definitely a cool class.",
+  subject: 'History',
+  image_url: 'https://oneclassblog.com/wp-content/uploads/2018/12/hong-kong-2545665_1920-1024x683.jpg',
+  price: 150,
+  start_date: Faker::Date.in_date_period,
+  end_date: Faker::Date.in_date_period(year: 2023, month: 6),
+  rating: [1, 2, 3, 4, 5].sample,
+  institution_id: 4
+)
+
+Course.create(
+  professor: Faker::Name.name,
+  title: 'The Scottish Enlightenment: Ideas and Influences',
+  description: 'When in Glasgow, learn about the Scottish Enlightenment. This class will introduce students to the movement and how it has had a lasting influence on the country. It also enables students to visit important Scottish cultural centres, museums and libraries.',
+  subject: 'Philosophy' ,
+  image_url: 'https://i2.wp.com/oneclassblog.com/wp-content/uploads/2018/12/glasgow-2997986_1920.jpg?fit=840%2C556&ssl=1',
+  price: 150,
+  start_date: Faker::Date.in_date_period,
+  end_date: Faker::Date.in_date_period(year: 2023, month: 6),
+  rating: [1, 2, 3, 4, 5].sample,
+  institution_id: 4
+)
+
+Course.create(
+  professor: Faker::Name.name,
+  title: 'Wireless Sensor Networks ',
+  description: "This class is an introduction to a fundamental part of modern society. Learn all about embedded systems and wireless sensor networks. By the end of the class, you'll have a key understanding of every aspect of the applications and technology.",
+  subject: 'Engineering',
+  image_url: 'https://i2.wp.com/oneclassblog.com/wp-content/uploads/2018/12/algorithms-10-00080-g001.png?fit=840%2C449&ssl=1',
+  price: 150,
+  start_date: Faker::Date.in_date_period,
+  end_date: Faker::Date.in_date_period(year: 2023, month: 6),
+  rating: [1, 2, 3, 4, 5].sample,
+  institution_id: 4
+)
+
+Course.create(
+  professor: Faker::Name.name,
+  title: "Writing for Performance ",
+  description: "Contemporary writing for performance is a highly sought-after skill. You will develop your own writing ability, conduct an individual project and explore other pieces of performance writing. You will finish this cool class with all the skills and techniques needed for live performance.",
+  subject: "Drama",
+  image_url: 'https://oneclassblog.com/wp-content/uploads/2018/12/Hamlin_theatre.jpg' ,
+  price: 150,
+  start_date: Faker::Date.in_date_period,
+  end_date: Faker::Date.in_date_period(year: 2023, month: 6),
+  rating: [1, 2, 3, 4, 5].sample,
+  institution_id: 4
+)
+
+Course.create(
+  professor: Faker::Name.name,
+  title: 'Urban Conservation',
+  description: "In a city so rich in conservation areas, beautiful culture and rich architecture, you couldn't be studying this class in a better place. Explore the philosophy, methods and principles behind urban conservation at the University of Glasgow.",
+  subject: "Architecture",
+  image_url: 'https://i1.wp.com/oneclassblog.com/wp-content/uploads/2018/12/glasgow-2173449_1920.jpg?fit=840%2C558&ssl=1',
+  price: 150,
+  start_date: Faker::Date.in_date_period,
+  end_date: Faker::Date.in_date_period(year: 2023, month: 6),
+  rating: [1, 2, 3, 4, 5].sample,
+  institution_id: 4
+)
+
+Course.create(
+  professor: Faker::Name.name,
+  title: 'Mandarin Advanced Translation',
+  description: "As part of Glasgow's SMLC Translations Studies Programme, this class will give students all the necessary training and practice needed to effectively translate from English to Mandarin. This is a super special class, courtesy of the University's unique programme.",
+  subject: 'Linguistics',
+  image_url: 'https://i0.wp.com/oneclassblog.com/wp-content/uploads/2018/12/language-2345801_1920-1.jpg?fit=840%2C630&ssl=1',
+  price: 150,
+  start_date: Faker::Date.in_date_period,
+  end_date: Faker::Date.in_date_period(year: 2023, month: 6),
+  rating: [1, 2, 3, 4, 5].sample,
+  institution_id: 4
+)
+
+Course.create(
   professor: "Nicholas Spire",
-  title: "Studio 1.1",
+  title: "Studio",
   description: "This unit establishes the principles and skills in research, analysis, argument and representation that support an understanding of architectural design.",
   subject: "Architecture",
   price: 120,
@@ -51,7 +209,7 @@ Course.create(
 
 Course.create(
   professor: "Victor Bauhaus",
-  title: "Humanities 3",
+  title: "Humanities",
   description: "This unit develops knowledge and understanding of the historical, cultural and professional contexts for architectural design and extends skills in research,analysis, academic writing and visual representation.",
   subject: "Architecture",
   price: 150,
@@ -71,7 +229,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: [1, 2, 3, 4, 5].sample,
-  image_url: "https://www.rncm.ac.uk/uploads/Study-Here-image-2019.jpg",
+  image_url: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Orchestra.jpg",
   institution_id: 3
 )
 
