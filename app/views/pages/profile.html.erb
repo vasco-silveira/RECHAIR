@@ -1,14 +1,18 @@
 <div class="container-fluid">
+
   <h1>Hi, <%= @user.email %></h1>
   <h3>Check out this amazing test page</h3>
+  <%= image_tag "Header-avatar-01.svg", class: "avatar-large" %>
+  <br>
 
-  <p>Name: <%= @user.first_name %><%= @user.last_name %></p>
+  <p>Name: <%= @user.first_name %> <%= @user.last_name %></p>
   <p>Email: <%= @user.email %></p>
-  <p>User id <%= @user.id%></p>
-
-   <p> <%= @booking %></p>
+  <p>User id <%= @user.id %></p>
 
   <div>
     <%= link_to "Find a course to study", courses_path %>
+  </div>
+  <div>
+    <%= link_to "Edit your profile", edit_page_path(:id) %>
   </div>
 </div>
