@@ -26,3 +26,37 @@
 .red {
   color: $red;
 }
+
+// Below is CSS for booking confirmation page
+
+.confirmation-banner {
+  color: white;
+  text-align: center;
+  height: 50vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-image: url('https://www.hoteldonandres.com/wp-content/uploads/2016/10/blackboard.jpg');
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.confirmation-banner h1 {
+  font-size: 50px;
+  color: $dark_red;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+.confirmation-banner p {
+  font-size: 15px;
+  // font-weight: lighter;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.red {
+  color: $red;
+}
+
+.white {
+  color: $white;
+}
