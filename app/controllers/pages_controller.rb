@@ -6,7 +6,7 @@ class PagesController < ApplicationController
 
   def profile
     @user = current_user
-    @booking = Booking.where(user: current_user)
+    @bookings = current_user.bookings
   end
 
   def edit
