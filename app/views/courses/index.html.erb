@@ -8,10 +8,14 @@
           </div>
         </div>
         <div class="row">
-          <div class="col">
-            <h4><%= link_to course.title, course_path(course) %></h4>
+          <div class="col text-center">
+            <h5><%= link_to course.title, course_path(course) %>, </h5>
+            <h6>at <%= course.institution.name %></h6> <%# add link to institution profile page %>
             <p><%= course.description %></p>
           </div>
+        </div>
+        <div class="text-left">
+          <p>Prof. <%= course.professor %></p>
         </div>
       </div>
     </div>
