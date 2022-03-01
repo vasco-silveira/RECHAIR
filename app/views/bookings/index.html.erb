@@ -1,8 +1,10 @@
-<h2>Chairs booked</h2>
-
-<div>
-  <% @bookings.each do |b| %>
-    <%= b.course.start_date %>
-  <% end %>
-
+<div class="confirmation-banner" style="background-image: linear-gradient(-225deg, #231B1B 0%, rgba(0,36,61,0.6) 50%), url('https://www.hoteldonandres.com/wp-content/uploads/2016/10/blackboard.jpg')">
+  <div class="banner-content">
+    <i class="fa-solid fa-check fa-8x"></i>
+    <h1>Thanks for booking with <span class=red>Re</span>Chair</h1>
+    <p> You're all set! You'll receive an email from your institution confirming your Chair and further details on your chosen course. </p>
+    <p>To view and manage your bookings, head over to your <%= link_to "profile page", profile_path %></p>
+    <%= form_with url: "courses", method: :get do |form| %>
+    <%= form.submit "Discover more", class: "btn btn-primary btn-lg" %>
+<% end %>
 </div>
