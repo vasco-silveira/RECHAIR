@@ -14,28 +14,32 @@ Institution.create!(
   name: 'The University of Manchester',
   address: "Oxford Rd, Manchester M13 9PL",
   description: 'The University of Manchester is a historic institution, known for its groundbreaking discoveries and high-quality research with a global impact. Tracing its history back to 1824, this Russell Group university offers an exciting city campus environment and some of the best-funded student facilities in the UK.',
-  image_url: 'https://ctfimages.intoglobal.com/xw2h6mjophtz/731sOVK2X4DrG83SK4jXAf/395ba54e3dc059a2fbb5b1fa5ca33cf3/Contentful_-_Campus_LifeUOM.jpg'
+  image_url: 'https://ctfimages.intoglobal.com/xw2h6mjophtz/731sOVK2X4DrG83SK4jXAf/395ba54e3dc059a2fbb5b1fa5ca33cf3/Contentful_-_Campus_LifeUOM.jpg',
+  city: 'Manchester'
 )
 
 Institution.create!(
   name: 'Manchester Metropolitan',
   address: "All Saints, All Saints Building, Manchester M15 6BH",
   description: 'Here to make an impact on Manchester, our nation and beyond, with a driving ambition to discover and disseminate knowledge, and make higher education accessible and beneficial to all those with the passion and ability to succeed.',
-  image_url: 'https://ctfimages.intoglobal.com/xw2h6mjophtz/5cdMW38yv1E6OJStQXDzfT/2740a3c0a2bf39986b335e329b9fb736/Exterior_Manchester_Metropolitan_University.JPG'
+  image_url: 'https://ctfimages.intoglobal.com/xw2h6mjophtz/5cdMW38yv1E6OJStQXDzfT/2740a3c0a2bf39986b335e329b9fb736/Exterior_Manchester_Metropolitan_University.JPG',
+  city: 'Manchester'
 )
 
 Institution.create!(
   name: 'The Royal Northern College of Music',
   address: "124 Oxford Rd, Manchester M13 9RD",
   description: 'The Royal Northern College of Music (RNCM) is a leading conservatoire located in Manchester, England. It is one of four conservatoires associated with the Associated Board of the Royal Schools of Music.',
-  image_url: 'https://www.rncm.ac.uk/uploads/website-open-day-R.jpg'
+  image_url: 'https://www.rncm.ac.uk/uploads/website-open-day-R.jpg',
+  city: 'Manchester'
 )
 
 Institution.create!(
   name: 'Manchester School of Architecture',
   address: "Chatham Building, Cavendish St, Manchester M15 6BR",
   description: 'The Manchester School of Architecture (MSA) provide undergraduate and postgraduate architecture courses, jointly run by Manchester Metropolitan University and the University of Manchester. Students will benefit from the considerable resources available at both universities, along with teaching and research expertise.',
-  image_url: 'https://i2-prod.manchestereveningnews.co.uk/incoming/article7451078.ece/ALTERNATES/s1200c/JS41979899.jpg'
+  image_url: 'https://i2-prod.manchestereveningnews.co.uk/incoming/article7451078.ece/ALTERNATES/s1200c/JS41979899.jpg',
+  city: 'Manchester'
 )
 
 Course.create(
@@ -61,7 +65,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: [1, 2, 3, 4, 5].sample,
-  institution_id: 4
+  institution_id: 2
 )
 
 Course.create(
@@ -74,7 +78,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: [1, 2, 3, 4, 5].sample,
-  institution_id: 4
+  institution_id: 1
 )
 
 Course.create(
@@ -87,7 +91,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: [1, 2, 3, 4, 5].sample,
-  institution_id: 4
+  institution_id: 3
 )
 
 Course.create(
@@ -100,7 +104,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: [1, 2, 3, 4, 5].sample,
-  institution_id: 4
+  institution_id: 5
 )
 
 Course.create(
@@ -126,7 +130,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: [1, 2, 3, 4, 5].sample,
-  institution_id: 4
+  institution_id: 1
 )
 
 Course.create(
@@ -139,7 +143,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: [1, 2, 3, 4, 5].sample,
-  institution_id: 4
+  institution_id: 2
 )
 
 Course.create(
@@ -152,7 +156,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: [1, 2, 3, 4, 5].sample,
-  institution_id: 4
+  institution_id: 3
 )
 
 Course.create(
@@ -165,7 +169,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: [1, 2, 3, 4, 5].sample,
-  institution_id: 4
+  institution_id: 5
 )
 
 Course.create(
@@ -178,7 +182,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: [1, 2, 3, 4, 5].sample,
-  institution_id: 4
+  institution_id: 3
 )
 
 Course.create(
@@ -191,7 +195,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: [1, 2, 3, 4, 5].sample,
-  institution_id: 4
+  institution_id: 1
 )
 
 Course.create(
@@ -217,7 +221,7 @@ Course.create(
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: [1, 2, 3, 4, 5].sample,
   image_url: "https://www.msa.ac.uk/media/msaacuk/content/images/img18.jpg",
-  institution_id: 4
+  institution_id: 2
 )
 
 Course.create(
