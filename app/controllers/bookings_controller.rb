@@ -20,7 +20,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.course = @course
     @course.save
-    if @course.save!
+    if @booking.save!
       redirect_to bookings_path
     else
       render :new
