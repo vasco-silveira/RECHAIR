@@ -16,9 +16,10 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new
+    @course = Course.find(params[:course_id])
     @booking.user = current_user
     @booking.course = @course
-    @course.save
+    @booking.save
     if @booking.save!
       redirect_to bookings_path
     else
