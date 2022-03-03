@@ -8,17 +8,22 @@
               <img src="<%= course.image_url %>">
             </div>
           </div>
+          <%# Course title, Institution name, and Description %>
           <div class="row">
-            <div class="col text-center">
-              <h5><%= link_to course.title, course_path(course) %>, </h5>
-              <h6>at <%= course.institution.name %></h6> <%# add link to institution profile page %>
-              <p><%= course.description.first(150) %>...</p>
-            </div>
+            <div class="col">
+              <div class="text-center">
+                <h5><%= link_to course.title, course_path(course) %>, </h5>
+                <h6>at <%= course.institution.name %></h6> <%# add link to institution profile page %>
+              </div>
+              <div class="text-left">
+                <p><%= course.description.first(150) %>...</p>
+              </div>
+            </div>            
           </div>
+          <%# Professor name and Price %>
           <div class="d-flex justify-content-between card-bottom">
             <p>Prof. <%= course.professor %></p>
-            <%# <p><%= course.professor %></p> <%# Add city after professor? Maybe Uni name is suggestive %>
-            <p>Price: £<%= course.price %></p>
+            <p>£<%= course.price %></p>
           </div>
         </div>
       </div>
