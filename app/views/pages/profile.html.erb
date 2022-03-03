@@ -1,14 +1,18 @@
 <div class="container-fluid">
 
   <h1>Hi, <%= @user.email %></h1>
-  <h3>Check out this amazing test page</h3>
-  <%= image_tag "Header-avatar-01.svg", class: "avatar-large" %>
-  <br>
+  <h3>Let's see what courses you have coming up...</h3>
+  <div class="flex-container">
+    <div>
+      <%= image_tag "Header-avatar-01.svg", class: "avatar-large" %>
+    </div>
 
-  <p>Name: <%= @user.first_name %> <%= @user.last_name %></p>
-  <p>Email: <%= @user.email %></p>
 
-  <p>User id <%= @user.id%></p>
+    <div>
+      <p>Name: <%= @user.first_name %> <%= @user.last_name %></p>
+      <p>Email: <%= @user.email %></p>
+    </div>
+  </div>
 
   <h1>My Bookings</h1>
   <% @bookings.each do |booking| %>
@@ -23,7 +27,7 @@
         <p>Starts on <%= booking.course.start_date.to_formatted_s(:short) %>
       </div>
       <div>
-        Ends on <%= booking.course.end_date.to_formatted_s(:long) %></p>
+        Ends on <%= booking.course.end_date.to_formatted_s(:short) %></p>
       </div>
     <br>
   <% end %>

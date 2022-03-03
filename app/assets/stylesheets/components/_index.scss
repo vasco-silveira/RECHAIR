@@ -17,3 +17,12 @@
 .container-fluid h3 {
   text-align: center;
 }
+
+.flex-container {
+  display: flex;
+  display: inline-flex;
+}
+
+.flex-container > div {
+  margin: 10px
+}
