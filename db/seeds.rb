@@ -51,7 +51,7 @@ Course.create(
   price: 150,
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
-  rating: [1, 2, 3, 4, 5].sample,
+  rating: (rand(3.0..5.0)).round(2),
   institution_id: 4
 )
 
@@ -64,7 +64,7 @@ Course.create(
   price: 150,
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
-  rating: [1, 2, 3, 4, 5].sample,
+  rating: (rand(3.0..5.0)).round(2),
   institution_id: 2
 )
 
@@ -77,7 +77,7 @@ Course.create(
   price: 150,
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
-  rating: [1, 2, 3, 4, 5].sample,
+  rating: (rand(3.0..5.0)).round(2),
   institution_id: 1
 )
 
@@ -90,7 +90,7 @@ Course.create(
   price: 150,
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
-  rating: [1, 2, 3, 4, 5].sample,
+  rating: (rand(3.0..5.0)).round(2),
   institution_id: 3
 )
 
@@ -103,7 +103,7 @@ Course.create(
   price: 150,
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
-  rating: [1, 2, 3, 4, 5].sample,
+  rating: (rand(3.0..5.0)).round(2),
   institution_id: 5
 )
 
@@ -116,7 +116,7 @@ Course.create(
   price: 150,
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
-  rating: [1, 2, 3, 4, 5].sample,
+  rating: (rand(3.0..5.0)).round(2),
   institution_id: 4
 )
 
@@ -129,7 +129,7 @@ Course.create(
   price: 150,
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
-  rating: [1, 2, 3, 4, 5].sample,
+  rating: (rand(3.0..5.0)).round(2),
   institution_id: 1
 )
 
@@ -142,7 +142,7 @@ Course.create(
   price: 150,
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
-  rating: [1, 2, 3, 4, 5].sample,
+  rating: (rand(3.0..5.0)).round(2),
   institution_id: 2
 )
 
@@ -155,7 +155,7 @@ Course.create(
   price: 150,
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
-  rating: [1, 2, 3, 4, 5].sample,
+  rating: (rand(3.0..5.0)).round(2),
   institution_id: 3
 )
 
@@ -168,7 +168,7 @@ Course.create(
   price: 150,
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
-  rating: [1, 2, 3, 4, 5].sample,
+  rating: (rand(3.0..5.0)).round(2),
   institution_id: 5
 )
 
@@ -181,7 +181,7 @@ Course.create(
   price: 150,
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
-  rating: [1, 2, 3, 4, 5].sample,
+  rating: (rand(3.0..5.0)).round(2),
   institution_id: 3
 )
 
@@ -194,7 +194,7 @@ Course.create(
   price: 150,
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
-  rating: [1, 2, 3, 4, 5].sample,
+  rating: (rand(3.0..5.0)).round(2),
   institution_id: 1
 )
 
@@ -206,7 +206,7 @@ Course.create(
   price: 120,
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
-  rating: [1, 2, 3, 4, 5].sample,
+  rating: (rand(3.0..5.0)).round(2),
   image_url: "https://www.msa.ac.uk/media/msaacuk/content/study/ba/year1/2021/ba1-photo-simons-chinatown.jpg",
   institution_id: 4
 )
@@ -219,7 +219,7 @@ Course.create(
   price: 150,
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
-  rating: [1, 2, 3, 4, 5].sample,
+  rating: (rand(3.0..5.0)).round(2),
   image_url: "https://www.msa.ac.uk/media/msaacuk/content/images/img18.jpg",
   institution_id: 2
 )
@@ -232,7 +232,7 @@ Course.create(
   price: 130,
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
-  rating: [1, 2, 3, 4, 5].sample,
+  rating: (rand(3.0..5.0)).round(2),
   image_url: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Orchestra.jpg",
   institution_id: 3
 )
@@ -245,7 +245,7 @@ Course.create(
   price: 130,
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
-  rating: [1, 2, 3, 4, 5].sample,
+  rating: (rand(3.0..5.0)).round(2),
   image_url: "https://www.rncm.ac.uk/uploads/Study-Here-image-2019.jpg",
   institution_id: 3
 )
@@ -258,7 +258,7 @@ Course.create(
   price: 150,
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
-  rating: [1, 2, 3, 4, 5].sample,
+  rating: (rand(3.0..5.0)).round(2),
   image_url: "https://wpp-cdn.azgw.mmu.ac.uk/course-images/headers/326/course-history.jpg",
   institution_id: 2
 )
@@ -271,7 +271,7 @@ Course.create(
   price: 150,
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
-  rating: [1, 2, 3, 4, 5].sample,
+  rating: (rand(3.0..5.0)).round(2),
   image_url: "https://wpp-cdn.azgw.mmu.ac.uk/course-images/department_course_images/159/CMDT-30470159-cropped.jpg",
   institution_id: 2
 )
@@ -284,7 +284,7 @@ Course.create(
   price: 150,
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
-  rating: [1, 2, 3, 4, 5].sample,
+  rating: (rand(3.0..5.0)).round(2),
   image_url: "https://wpp-cdn.azgw.mmu.ac.uk/course-images/headers/156/HUMAN-GEOG-shutterstock_255819034_cropped.jpg",
   institution_id: 2
 )
@@ -297,7 +297,7 @@ Course.create(
   price: 150,
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
-  rating: [1, 2, 3, 4, 5].sample,
+  rating: (rand(3.0..5.0)).round(2),
   image_url: "//contentlibrary.manchester.ac.uk/_coursemarketing/UMANC/2022/156/07808/U_Accounting_1400x450a-1.jpg",
   institution_id: 1
 )
@@ -310,7 +310,7 @@ Course.create(
   price: 150,
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
-  rating: [1, 2, 3, 4, 5].sample,
+  rating: (rand(3.0..5.0)).round(2),
   image_url: "//contentlibrary.manchester.ac.uk/_coursemarketing/UMANC/2022/132/06613/U_drama-and-english-lit-ba1400x450.jpg",
   institution_id: 1
 )

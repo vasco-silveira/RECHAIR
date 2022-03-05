@@ -1,11 +1,72 @@
-
-
-<div class="banner" style="background-image: url('https://www.hoteldonandres.com/wp-content/uploads/2016/10/blackboard.jpg')">
+<%# Banner %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://wallpaperaccess.com/full/3540021.jpg')">
+<div class ="container">
   <div class="banner-content">
     <h1><span class=red>Re</span>Chair</h1>
     <p>Every chair is an opportunity</p>
-    <%= form_with url: "courses", method: :get do |form| %>
-    <%= form.text_field :query, placeholder: "Search for courses" %>
-    <%= form.submit "Go!", class: "btn btn-primary btn-lg" %>
-<% end %>
+    <%= link_to "Browse Chairs", courses_path, class:"btn btn-primary"%>
 </div>
+</div>
+</div>
+<br>
+<br>
+
+<%# Carousel %>
+<h1 style="font-weight: bold; text-align: center;"> Our Partners </h1>
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <%= image_tag "Carousel1.jpg", alt: "orange", class: "d-block w-100" %>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag "Carousel1.jpg", alt: "orange", class: "d-block w-100" %>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<%# TopRatedCourses %>
+<h1 style="font-weight: bold; text-align: center; padding:20px;"> Top rated courses </h1>
+
+  <div class="cards">
+    <% @courses.first(3).each do |course| %>
+      <div>
+        <div class="card-product">
+          <div class="row">
+            <div class="col">
+              <%= link_to course_path(course) do %>
+               <img src="<%=course.image_url%>">
+              <% end %>
+            </div>
+          </div>
+          <%# Course title, Institution name, and Description %>
+          <div class="row">
+            <div class="col">
+              <div class="text-center">
+                <h5><%= link_to course.title, course_path(course) %>, </h5>
+                <h6>at <%= course.institution.name %></h6> <%# add link to institution profile page %>
+              </div>
+              <div class="text-left">
+                <p><%= course.description.first(100) %>...</p>
+              </div>
+            </div>
+          </div>
+          <%# Professor name and Price %>
+          <div class="d-flex justify-content-between card-bottom">
+            <p>Prof. <%= course.professor %></p>
+            <p><i class="fa-solid fa-star"></i><%= course.rating %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <br>
+  <br>
+  <br>

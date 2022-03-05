@@ -6,10 +6,11 @@
 @import "banner";
 @import "logo";
 @import "button";
+@import "footer";
 
-.container-fluid {
-  padding: 30px;
-}
+// .container-fluid {
+//   // padding: 30px;
+// }
 
 .container-fluid h1 {
   text-align: center;
@@ -24,5 +25,5 @@
 }
 
 .flex-container > div {
-  margin: 10px
+  margin: 10px;
 }
