@@ -4,10 +4,11 @@ class CoursesController < ApplicationController
   def index
     # Add the folli=owing lines of code when we implement a search bar
     if params[:query].present?
-      @courses = Course.where("title ILIKE ?", "%#{params[:query]}%")
+      @courses = Course.search_by_title_and_description(params[:query])
     else
       @courses = Course.all
     end
+    @institutions = @courses.map { |course| course.institution.name }.uniq
     # @courses = Course.all
   end
 
