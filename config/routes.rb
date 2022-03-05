@@ -8,5 +8,7 @@ Rails.application.routes.draw do
   resources :bookings, only: [ :index, :show, :edit, :update, :destroy ]
   resources :pages, only: [ :index, :edit, :update ]
   get 'profile', to: 'pages#profile'
-  resources :chatrooms, only: :show
+  resources :chatrooms, only: :show do
+    resources :messages, only: :create
+  end
 end
