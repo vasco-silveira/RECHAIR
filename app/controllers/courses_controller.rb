@@ -9,6 +9,8 @@ class CoursesController < ApplicationController
       @courses = Course.all
     end
     @institutions = @courses.map { |course| course.institution.name }.uniq
+    @user = current_user
+
     # @courses = Course.all
   end
 
