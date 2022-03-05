@@ -5,7 +5,10 @@
         <div class="card-product">
           <div class="row">
             <div class="col">
-              <img src="<%= course.image_url %>">
+              <%= link_to course_path(course) do %>
+               <img src="<%=course.image_url%>">
+              <% end %>
+
             </div>
           </div>
           <%# Course title, Institution name, and Description %>
@@ -16,9 +19,9 @@
                 <h6>at <%= course.institution.name %></h6> <%# add link to institution profile page %>
               </div>
               <div class="text-left">
-                <p><%= course.description.first(150) %>...</p>
+                <p><%= course.description.first(100) %>...</p>
               </div>
-            </div>            
+            </div>
           </div>
           <%# Professor name and Price %>
           <div class="d-flex justify-content-between card-bottom">
