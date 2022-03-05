@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_01_201932) do
+ActiveRecord::Schema.define(version: 2022_03_05_111042) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,11 +32,11 @@ ActiveRecord::Schema.define(version: 2022_03_01_201932) do
     t.integer "price"
     t.date "start_date"
     t.date "end_date"
-    t.integer "rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "image_url"
     t.bigint "institution_id", null: false
+    t.float "rating"
     t.index ["institution_id"], name: "index_courses_on_institution_id"
   end
 
