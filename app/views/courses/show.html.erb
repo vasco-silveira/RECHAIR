@@ -25,7 +25,7 @@
 
     <div class="booking-btn">
       <%= simple_form_for [@course, Booking.new] do |f| %>
-        <%= f.submit "Reserve Chair", class: "btn btn-primary" %>
+        <%= f.submit "Reserve Chair", class: "btn btn-primary", id: "reservation-btn", data: {course_id: @course.id, user_id: current_user.id} %>
       <% end %>
     </div>
   </div>
