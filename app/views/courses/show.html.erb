@@ -23,11 +23,13 @@
       <p> <b>Course rating:</b> <%= @course.rating %> </p>
     </div>
 
-    <div class="booking-btn">
-      <%= simple_form_for [@course, Booking.new] do |f| %>
-        <%= f.submit "Reserve Chair", class: "btn btn-primary", id: "reservation-btn", data: {course_id: @course.id, user_id: current_user.id} %>
-      <% end %>
-    </div>
+    <% if current_user.bookings.where(course_id: @course.id) == [] %>
+      <div class="booking-btn">
+        <%= simple_form_for [@course, Booking.new] do |f| %>
+          <%= f.submit "Reserve Chair", class: "btn btn-primary", id: "reservation-btn", data: {course_id: @course.id, user_id: current_user.id} %>
+        <% end %>
+      </div>
+    <% end %>
   </div>
 
   <hr>
