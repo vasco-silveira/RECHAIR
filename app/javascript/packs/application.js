@@ -23,9 +23,10 @@ import "bootstrap";
 import Swal from 'sweetalert2'
 
 // Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
+import { initChatroomCable } from '../channels/chatroom_channel';
 
 document.addEventListener('turbolinks:load', () => {
+
   // Call your functions here, e.g:
   // initSelect2();
   const reservationBtn = document.getElementById("reservation-btn");
@@ -64,5 +65,7 @@ document.addEventListener('turbolinks:load', () => {
       })
     });
   }
+
+  initChatroomCable();
 
 });
