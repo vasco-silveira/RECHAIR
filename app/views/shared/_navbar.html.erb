@@ -13,10 +13,12 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-        <%= form_with url: "courses", method: :get do |form| %>
-        <%= form.text_field :query, placeholder: "Search for courses" %>
-        <%= form.submit "Go!", class: "btn btn-primary btn-lg" %>
-        <% end %>
+          <li style="padding-right: 90px">
+            <%= form_with url: "courses", method: :get do |form| %>
+            <%= form.text_field :query, placeholder: "Search for courses" %>
+            <%= form.submit "Go!", class: "btn btn-primary btn-lg" %>
+            <% end %>
+          </li>
           <li class="nav-item dropdown">
             <%= image_tag "Header-avatar-01-white.svg", class: "avatar dropdown-toggle", id: "navbarDropdown", 'data-toggle':"dropdown", 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -25,11 +27,11 @@
             </div>
           </li>
         <% else %>
-          <li class ="nav-item">
-          <%= form_with url: "courses", method: :get do |form| %>
-          <%= form.text_field :query, placeholder: "Search for courses" %>
-          <%= form.submit "Go!", class: "btn btn-primary btn-lg" %>
-          <% end %>
+          <li class ="nav-item" style="padding-right: 90px">
+            <%= form_with url: "courses", method: :get do |form| %>
+            <%= form.text_field :query, placeholder: "Search for courses" %>
+            <%= form.submit "Go!", class: "btn btn-primary btn-lg" %>
+            <% end %>
           </li>
           <li class="nav-item">
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
