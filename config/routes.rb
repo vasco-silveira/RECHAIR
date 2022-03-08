@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   # devise_for :users
+  delete "/sessions/destroy", to: "devise/sessions#destroy"
   root to: 'pages#home'
   resources :courses, only: [ :index, :show ] do
     resources :bookings, only: [ :new, :create ]
