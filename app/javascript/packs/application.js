@@ -20,16 +20,17 @@ ActiveStorage.start()
 
 // External imports
 import "bootstrap";
-import Swal from 'sweetalert2'
 
 // Internal imports, e.g:
 import { initChatroomCable } from '../channels/chatroom_channel';
 import {successpopup} from '../components/successpopup';
+import {deletepopup} from '../components/deletepopup';
 document.addEventListener('turbolinks:load', () => {
 
   // Call your functions here, e.g:
 
   // initSelect2();
+  deletepopup()
   successpopup()
   initChatroomCable();
 });
