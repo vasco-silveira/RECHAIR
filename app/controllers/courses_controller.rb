@@ -3,17 +3,14 @@ class CoursesController < ApplicationController
 
   def index
     # Add the folli=owing lines of code when we implement a search bar
-    if params[:query].present? || params[:institution].present?
+    if params[:query].present?
       courses_by_query = Course.search_by_title_and_description(params[:query])
-      if params[:institution][:id].empty?
-        @courses = courses_by_query
-      else
+      @courses = courses_by_query
+      if params[:institution].present? && params[:institution][:id].present?
         @courses =  courses_by_query.where(institution: params[:institution][:id])
       end
-      if @courses.empty?
-        @courses = Course.all
-      end
-
+    elsif params[:institution].present? && params[:institution][:id].present?
+      @courses =  Course.all.where(institution: params[:institution][:id])
     else
       @courses = Course.all
     end
