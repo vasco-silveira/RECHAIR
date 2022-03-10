@@ -23,6 +23,7 @@
       <p> <b>Course rating:</b> <%= @course.rating %> </p>
     </div>
 
+    <%# Button to Reserve Chair %>
     <% if current_user.bookings.where(course_id: @course.id) == [] %>
       <div class="booking-btn">
         <%= simple_form_for [@course, Booking.new] do |f| %>
@@ -30,6 +31,10 @@
         <% end %>
       </div>
     <% end %>
+
+    <%# Button to Ask Instructor a Question %>
+    
+
   </div>
 
   <hr>
