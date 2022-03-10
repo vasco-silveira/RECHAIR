@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   # devise_for :users
+  post "/booking/destroy", to: "bookings#destroy", as: "booking_destroy"
   delete "/sessions/destroy", to: "devise/sessions#destroy"
   root to: 'pages#home'
   resources :courses, only: [ :index, :show ] do

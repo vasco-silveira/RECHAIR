@@ -1,3 +1,6 @@
+import Swal from 'sweetalert2'
+
+
 export const successpopup = () => {
     const reservationBtn = document.getElementById("reservation-btn");
   if (reservationBtn) {

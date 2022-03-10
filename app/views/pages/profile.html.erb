@@ -1,21 +1,25 @@
 <div class="container-fluid">
 
   <h1>Hi, <%= @user.first_name %></h1>
-  <h3>Let's see what courses you have coming up...</h3>
   <div class="flex-container">
     <div>
       <%= image_tag "Header-avatar-01.svg", class: "avatar-large" %>
     </div>
 
-
     <div>
       <p>Name: <%= @user.first_name %> <%= @user.last_name %></p>
       <p>Email: <%= @user.email %></p>
+      <div>
+        <%= link_to "Edit your profile", edit_page_path(:id) %>
+      </div>
     </div>
   </div>
+  <hr>
 </div>
 <div class="container-fluid">
   <h1>My Bookings</h1>
+  <h3>Let's see what courses you have coming up...</h3>
+
 
 <div class="container-fluid">
   <div class="cards">
@@ -34,15 +38,18 @@
                 <h5><%= booking.course.title %> </h5>
                 <h6>at <%= booking.course.institution.name %></h6> <%# add link to institution profile page %>
               </div>
-              <div class="text-left">
-                <p><%= booking.course.description.first(150) %>...</p>
-              </div>
             </div>
           </div>
           <%# Professor name and Price %>
-          <div class="d-flex justify-content-between card-bottom">
-            <p>Prof. <%= booking.course.professor %></p>
-            <p>£<%= booking.course.price %></p>
+          <div class="d-flex justify-content-around card-bottom padding-top-20px">
+            <%# <i class="fa-solid fa-books"></i> %>
+            <%# <i class="fa-solid fa-trash" id = "delete-btn"></i> %>
+
+            <%= link_to booking_path(booking) ,method: :delete, remote: true do %>
+            <%# <p><i class="fa-solid fa-trash" id = "delete-btn"></i></p> %>
+            <i class="fa-solid fa-trash" id ="delete-btn"></i>
+            <% end %>
+
           </div>
         </div>
       </div>
@@ -54,9 +61,6 @@
   <div class="flex-container">
     <div>
       <%= link_to "Find a course to study", courses_path %>
-    </div>
-    <div>
-      <%= link_to "Edit your profile", edit_page_path(:id) %>
     </div>
   </div>
 </div>
