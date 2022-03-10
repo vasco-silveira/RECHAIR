@@ -38,16 +38,22 @@
 .banner h1 {
   margin: 0;
   color: white;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  font-size: 32px;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+  font-size: 62px;
   font-weight: bold;
+  font-family: 'IBM Plex Serif', serif;
+
 }
 
 .banner p {
   font-size: 20px;
   color: white;
-  opacity: 0.7;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  opacity: 0.8;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 // Below is CSS for booking confirmation page

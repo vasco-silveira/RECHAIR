@@ -1,13 +1,20 @@
-
-<%= form_tag courses_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a course"
-  %>
-  <%= collection_select :institution, :id, Institution.all, :id, :name, include_blank: true, selected: params[:institution] ? params[:institution][:id]: nil %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
+<div class="index-search">
+  <div class="search-item">
+    <%= form_tag courses_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a course"
+      %>
+    </div>
+    <div class="search-item">
+      <%= collection_select :institution, :id, Institution.all, :id, :name, include_blank: true, selected: params[:institution] ? params[:institution][:id]: nil %>
+    </div>
+    <div class="search-item">
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
 
 <div class="container-fluid">
   <div class="cards">

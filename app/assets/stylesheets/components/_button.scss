@@ -4,11 +4,18 @@
   border-color: $dark_blue;
   border-radius: 5px;
   height: 30px;
-  font-size: 20px;
-  padding: 0px 15px 0px 15px;
+  font-size: 12px;
+  padding: auto;
+  transition: transform .2s;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
 
   &:hover {
-    background-color: $light_blue;
-    border-color: $light_blue;
+    // background-color: $light_blue;
+    // border-color: $light_blue;
+    transform: scale(1.05);
+    background-color: $dark_blue;
+    border-color: $dark_blue;
   }
 }
