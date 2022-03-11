@@ -1,27 +1,63 @@
-
 section {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.course-img {
-  height: 80%;
-  width: 80%;
-  object-fit: cover;
+.uni {
+  width: 100%;
+  height: 20%;
 }
 
+// .course-img {
+//   height: 200px;
+//   width: 100%;
+//   object-fit: cover;
+// }
+
+.showcard {
+  display: flex;
+  justify-content: space-between;
+}
 .info-section {
-display: flex;
-justify-content: space-between;
-}
-
-.booking-btn {
-padding-right: 50px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .course-page-title {
-padding-top: 20px;
-display: flex;
-justify-items: flex-start;
+  padding-top: 20px;
+  display: flex;
+  justify-items: flex-start;
+}
+
+.card-product-show {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  width: 35%;
+  height: 200px;
+}
+
+.card-product-show img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.card-product-show p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: 0.7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product-show .card-product-infos-show {
+  padding: 16px;
 }
