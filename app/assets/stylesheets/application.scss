@@ -11,3 +11,22 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+  background-color: $black;
+}
+
+h1 {
+  color: $white;
+  font-family: 'IBM Plex Serif', serif;
+}
+
+h3 {
+  color: $white;
+  font-family: 'Inter', sans-serif;
+  text-shadow: 1px 1px 2px $dark_blue
+}
+
+p {
+  color: $white;
+}

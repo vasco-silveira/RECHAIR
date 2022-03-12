@@ -17,12 +17,19 @@ User.create(
   password: "123456"
 )
 
+User.create(
+  first_name: 'Joe',
+  last_name: 'Biden',
+  email: "joe@email.com",
+  password: "123456"
+)
+
 Institution.create!(
   name: 'University College London',
   city: "London",
   country: 'UK',
   zipcode: "WC1E6BT",
-  address: "Grower St",
+  address: "Gower St, London WC1E 6BT",
   description: 'University College London, which operates as UCL, is a major public research university located in London, United Kingdom.',
   image_url: 'https://ctfimages.intoglobal.com/xw2h6mjophtz/731sOVK2X4DrG83SK4jXAf/395ba54e3dc059a2fbb5b1fa5ca33cf3/Contentful_-_Campus_LifeUOM.jpg',
 )
@@ -80,6 +87,13 @@ Institution.create!(
 #   image_url: 'https://i2-prod.manchestereveningnews.co.uk/incoming/article7451078.ece/ALTERNATES/s1200c/JS41979899.jpg',
 #   city: 'Manchester'
 # )
+i = 0
+for a in 1..20 do
+  Chatroom.create(
+    name: 'Roundtable',
+    course_id: i + 1
+  )
+end
 
 Course.create(
   professor: Faker::Name.name,
