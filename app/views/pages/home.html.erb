@@ -1,5 +1,5 @@
 <%# Banner %>
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://wallpaperaccess.com/full/3540021.jpg')">
+<div class="banner" >
 <div class ="container">
   <div class="banner-content">
     <h1><span class=red>Re</span>Chair</h1>
@@ -13,7 +13,7 @@
 
 <div id="wrapper" style="width:80%; margin:auto">
 <%# Carousel %>
-<h1 style="font-weight: bold; text-align: center;"> Our Partners </h1>
+<h3 style="font-weight: bold; text-align: center; padding:20px;"> Our Partners </h3>
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -32,9 +32,9 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-
+<br>
 <%# TopRatedCourses %>
-<h1 style="font-weight: bold; text-align: center; padding:20px;"> Top rated courses </h1>
+<h3 style="font-weight: bold; text-align: center; padding:20px;"> Top Courses </h3>
 
   <div class="cards">
     <% @courses.first(3).each do |course| %>

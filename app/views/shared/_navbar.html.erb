@@ -12,14 +12,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
-        <% unless params[:controller] == "courses" && params[:action] == "index" %>
-            <li style="padding-right: 90px">
-              <%= form_with url: "courses", method: :get do |form| %>
-              <%= form.text_field :query, placeholder: "Search for courses" %>
-              <%= form.submit "Go!", class: "btn btn-primary btn-lg" %>
-              <% end %>
-            </li>
-          <% end %>
+
         <% if user_signed_in? %>
 
           <li class="nav-item dropdown">
