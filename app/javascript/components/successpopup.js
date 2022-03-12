@@ -9,7 +9,7 @@ export const successpopup = () => {
       event.preventDefault();
       Swal.fire({
         title: 'Confirm Chair',
-        text: 'Do you want to continue',
+        text: 'Do you wish to continue?',
         icon: 'warning',
         showCancelButton: true,
         cancelButtonColor: '#d33',
@@ -29,9 +29,13 @@ export const successpopup = () => {
             console.log("Request complete! response:", res);
             Swal.fire(
               'Chair confirmed!',
-              "You're all set! You'll receive an email from your institution confirming your chair and further details on your chosen course. To manage your course, head over to your profile page",
+              "You're all set! You'll receive an email from your institution confirming your chair and further details on your chosen course.<br>" + "<br>To manage your courses, head over to your profile page.",
               'success'
-            )
+            ).then((result) => {
+              if (result.value) {
+                window.location.reload()
+              }
+            })
             // window.location.href = `/courses/${courseId}`;
           });
         }
