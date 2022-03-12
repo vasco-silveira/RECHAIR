@@ -13,7 +13,7 @@
   </div>
 
   <hr>
-  <%= @markers%>
+
 <div id="show-content" style="display:flex; justify-content:space-between">
   <div class="description-section" style="width:50%">
     <p> <b>Description:</b> </p>
@@ -22,11 +22,14 @@
     <br>
     <br>
 
+  <h5>Find Us </h5>
     <div id="map"
-     style="width: 100%; height: 600px;"
+     style="width: 100%; height: 200px;"
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
      </div>
+     <br>
+     <h6>Address: <%= @institution.address%></h6>
   </div>
 
   <%# Button to Reserve Chair %>
