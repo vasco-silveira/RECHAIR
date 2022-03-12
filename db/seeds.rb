@@ -21,7 +21,8 @@ User.create(
   first_name: 'Joe',
   last_name: 'Biden',
   email: "joe@email.com",
-  password: "123456"
+  password: "123456",
+  admin: true
 )
 
 Institution.create!(
