@@ -13,10 +13,20 @@
   </div>
 
   <hr>
+  <%= @markers%>
 <div id="show-content" style="display:flex; justify-content:space-between">
   <div class="description-section" style="width:50%">
     <p> <b>Description:</b> </p>
     <p> <%= @course.description %> </p>
+
+    <br>
+    <br>
+
+    <div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+     </div>
   </div>
 
   <%# Button to Reserve Chair %>
@@ -29,10 +39,11 @@
       <p> <b>Price:</b> £<%= @course.price %> </p>
 <br>
       <% if current_user.bookings.where(course_id: @course.id) == [] %>
-
         <%= simple_form_for [@course, Booking.new] do |f| %>
           <%= f.submit "Reserve Chair", class: "btn btn-primary", id: "reservation-btn", data: {course_id: @course.id, user_id: current_user.id} %>
         <% end %>
+        <%else%>
+         <%= link_to "Join our roundtable", courses_path, class:"btn btn-primary"%>
       <% end %>
     </div>
   </div>
