@@ -1,5 +1,5 @@
 <div class="index-search">
-  <div class="search-item">
+  <div class= "search-item">
     <%= form_tag courses_path, method: :get do %>
       <%= text_field_tag :query,
         params[:query],
@@ -7,10 +7,10 @@
         placeholder: "Find a course"
       %>
     </div>
-    <div class="search-item">
-      <%= collection_select :institution, :id, Institution.all, :id, :name, include_blank: true, selected: params[:institution] ? params[:institution][:id]: nil %>
+    <div class= "search-item">
+      <%= collection_select :institution, :id, Institution.all, :id, :name, { :include_blank => true }, { :selected => params[:institution] ? params[:institution][:id] : nil, :class => "custom-select" } %>
     </div>
-    <div class="search-item">
+    <div class= "search-item">
       <%= submit_tag "Search", class: "btn btn-primary" %>
     </div>
   <% end %>
