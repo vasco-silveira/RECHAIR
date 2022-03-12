@@ -80,6 +80,13 @@ Institution.create!(
 #   image_url: 'https://i2-prod.manchestereveningnews.co.uk/incoming/article7451078.ece/ALTERNATES/s1200c/JS41979899.jpg',
 #   city: 'Manchester'
 # )
+i = 0
+for a in 1..20 do
+  Chatroom.create(
+    name: 'Roundtable',
+    course_id: i + 1
+  )
+end
 
 Course.create(
   professor: Faker::Name.name,
