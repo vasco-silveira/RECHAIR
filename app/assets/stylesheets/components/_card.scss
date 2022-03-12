@@ -7,11 +7,29 @@
 .card-product {
   overflow: hidden;
   height: $card-height;
-  background: white;
+
   box-shadow: 0 0 15px rgba(177, 175, 175, 0.2);
   align-items: center;
   margin: 15px;
-  border-radius: 15px;
+  border-radius: 10px;
+  background: rgb(0,0,0);
+  transition: background-color .4s;
+  &:hover {
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 51%, rgba(41,41,41,1) 100%);
+  }
+
+}
+
+.card-product-show {
+  overflow: hidden;
+  height: $card-height;
+  box-shadow: 0 0 15px rgba(177, 175, 175, 0.2);
+  align-items: center;
+  margin: 15px;
+  border-radius: 10px;
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 51%, rgba(41,41,41,1) 100%);
+
+
 }
 
 .card-product img {
@@ -20,7 +38,7 @@
   object-fit: cover; // maybe it is better to use object-fit: contain
   padding: 15px;
   padding-bottom: 10px;
-  border-radius: 15px;
+  border-radius: 25px;
 }
 
 .card-product h5 {
@@ -28,9 +46,19 @@
   padding-right: 16px;
   // font-weight: bold;
   margin: 0;
-  color: black;
+  color: $white;
   text-decoration: none;
 }
+
+.card-product h6 {
+  padding-left: 16px;
+  padding-right: 16px;
+  // font-weight: bold;
+  margin: 0;
+  color: $white;
+  text-decoration: none;
+}
+
 
 .card-product p {
   padding-left: 16px;
@@ -56,14 +84,15 @@
 }
 
 .card-product a {
-  color: rgb(83, 83, 83);
+  color: $white;
   text-decoration: none;
+
+
+
+  border-radius: 10px;
 }
 
-.card-product a:hover {
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-}
+
 
 // .card-product .card-product-infos {
 //   padding: 16px;
