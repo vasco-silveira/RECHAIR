@@ -11,6 +11,7 @@
 <br>
 <br>
 
+<div id="wrapper" style="width:80%; margin:auto">
 <%# Carousel %>
 <h1 style="font-weight: bold; text-align: center;"> Our Partners </h1>
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -54,7 +55,7 @@
                 <h6>at <%= course.institution.name %></h6> <%# add link to institution profile page %>
               </div>
               <div class="text-left">
-                <p><%= course.description.first(100) %>...</p>
+                <p><%= course.description.first(90) %>...</p>
               </div>
             </div>
           </div>
@@ -70,3 +71,4 @@
   <br>
   <br>
   <br>
+</div>

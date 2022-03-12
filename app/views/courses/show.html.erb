@@ -1,38 +1,57 @@
-<div class="container-fluid">
-  <section>
-    <div>
-      <img class="image-fluid" src="<%= @course.image_url %>">
-    </div>
-  </section>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @institution.image_url%>);">
+  <div class="container-show">
+  <div id="wrapper" style="width:80%; margin:auto">
+    <h1 style="justify-content:center"><%= @course.institution.name %></h1>
+  </div>
+  </div>
+</div>
 
-
-  <div class="course-page-title">
+<div id="wrapper-show" style="width:80%; margin:auto;">
+  <div class="course-page-title" style="justify-content: space-between">
     <h3> <%= @course.title %> </h3>
-    <%# <h2> <%= @institution.name </h2> %>
+    <h3> <i class="fa-solid fa-star"></i> <%= @course.rating %> </h3>
   </div>
 
   <hr>
+  <%= @markers%>
+<div id="show-content" style="display:flex; justify-content:space-between">
+  <div class="description-section" style="width:50%">
+    <p> <b>Description:</b> </p>
+    <p> <%= @course.description %> </p>
 
-  <div class="info-section">
-    <div class="course-details-section">
-      <p> <b>Professor:</b> <%= @course.professor %> </p>
+    <br>
+    <br>
+
+    <div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+     </div>
+  </div>
+
+  <%# Button to Reserve Chair %>
+  <div class="card-product-show">
+  <img src="<%=@course.image_url%>" />
+    <div class="card-product-infos-show">
       <p> <b>Subject:</b> <%= @course.subject %> </p>
       <p> <b>Start date:</b> <%= @course.start_date %> </p>
       <p> <b>End date:</b> <%= @course.end_date %> </p>
       <p> <b>Price:</b> £<%= @course.price %> </p>
-      <p> <b>Course rating:</b> <%= @course.rating %> </p>
-    </div>
-
-    <%# Button to Reserve Chair %>
-    <% if current_user.bookings.where(course_id: @course.id) == [] %>
-      <div class="booking-btn">
+<br>
+      <% if current_user.bookings.where(course_id: @course.id) == [] %>
         <%= simple_form_for [@course, Booking.new] do |f| %>
           <%= f.submit "Reserve Chair", class: "btn btn-primary", id: "reservation-btn", data: {course_id: @course.id, user_id: current_user.id} %>
         <% end %>
-      </div>
+
+        <%else%>
+         <%= link_to "Join our roundtable", courses_path, class:"btn btn-primary"%>
+      <% end %>
+    </div>
+
+<!--       </div>
     <% end %>
 
-    <%# Button to Ask Instructor a Question %>
+<!--     <%# Button to Ask Instructor a Question %>
     <%# <% if current_user.chatrooms.where(course_id: @course.id) == [] %>
       <div class="booking-btn">
         <%= simple_form_for [@course, Chatroom.new] do |f| %>
@@ -40,14 +59,19 @@
         <% end %>
       </div>
     <%# <% end %>
-
-  </div>
+ -->
+<!--   </div>
 
   <hr>
 
   <div class="description-section">
     <p> <b>Description:</b> </p>
-    <p> <%= @course.description %> </p>
-  </div>
+    <p> <%= @course.description %> </p> -->
 
+  </div>
 </div>
+    <%# Button for discussion %>
+</div>
+<br>
+<br>
+<br>

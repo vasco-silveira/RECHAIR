@@ -10,37 +10,76 @@
   )
 end
 
+User.create(
+  first_name: 'Shotiko',
+  last_name: 'Abramishvili',
+  email: "shotiko@email.com",
+  password: "123456"
+)
+
 Institution.create!(
-  name: 'The University of Manchester',
-  address: "Oxford Rd, Manchester M13 9PL",
-  description: 'The University of Manchester is a historic institution, known for its groundbreaking discoveries and high-quality research with a global impact. Tracing its history back to 1824, this Russell Group university offers an exciting city campus environment and some of the best-funded student facilities in the UK.',
+  name: 'University College London',
+  city: "London",
+  country: 'UK',
+  zipcode: "WC1E6BT",
+  address: "Grower St",
+  description: 'University College London, which operates as UCL, is a major public research university located in London, United Kingdom.',
   image_url: 'https://ctfimages.intoglobal.com/xw2h6mjophtz/731sOVK2X4DrG83SK4jXAf/395ba54e3dc059a2fbb5b1fa5ca33cf3/Contentful_-_Campus_LifeUOM.jpg',
-  city: 'Manchester'
 )
 
 Institution.create!(
-  name: 'Manchester Metropolitan',
-  address: "All Saints, All Saints Building, Manchester M15 6BH",
-  description: 'Here to make an impact on Manchester, our nation and beyond, with a driving ambition to discover and disseminate knowledge, and make higher education accessible and beneficial to all those with the passion and ability to succeed.',
-  image_url: 'https://ctfimages.intoglobal.com/xw2h6mjophtz/5cdMW38yv1E6OJStQXDzfT/2740a3c0a2bf39986b335e329b9fb736/Exterior_Manchester_Metropolitan_University.JPG',
-  city: 'Manchester'
+  name: 'London School of Economics',
+  city: "London",
+  country: 'UK',
+  zipcode: "WC2A2AE",
+  address: "Houghton St",
+  description: 'The London School of Economics and Political Science is a public research university located in London, England, and a constituent college of the federal University of London.',
+  image_url: 'https://ctfimages.intoglobal.com/xw2h6mjophtz/731sOVK2X4DrG83SK4jXAf/395ba54e3dc059a2fbb5b1fa5ca33cf3/Contentful_-_Campus_LifeUOM.jpg',
 )
 
 Institution.create!(
-  name: 'The Royal Northern College of Music',
-  address: "124 Oxford Rd, Manchester M13 9RD",
-  description: 'The Royal Northern College of Music (RNCM) is a leading conservatoire located in Manchester, England. It is one of four conservatoires associated with the Associated Board of the Royal Schools of Music.',
-  image_url: 'https://www.rncm.ac.uk/uploads/website-open-day-R.jpg',
-  city: 'Manchester'
+  name: "King's College London",
+  city: "London",
+  country: 'UK',
+  zipcode: "WC2R2LS",
+  address: "Strand",
+  description: "King's College London is a public research university located in London, England. King's was established by royal charter in 1829 under the patronage of King George IV and the Duke of Wellington.",
+  image_url: 'https://ctfimages.intoglobal.com/xw2h6mjophtz/731sOVK2X4DrG83SK4jXAf/395ba54e3dc059a2fbb5b1fa5ca33cf3/Contentful_-_Campus_LifeUOM.jpg',
 )
 
 Institution.create!(
-  name: 'Manchester School of Architecture',
-  address: "Chatham Building, Cavendish St, Manchester M15 6BR",
-  description: 'The Manchester School of Architecture (MSA) provide undergraduate and postgraduate architecture courses, jointly run by Manchester Metropolitan University and the University of Manchester. Students will benefit from the considerable resources available at both universities, along with teaching and research expertise.',
-  image_url: 'https://i2-prod.manchestereveningnews.co.uk/incoming/article7451078.ece/ALTERNATES/s1200c/JS41979899.jpg',
-  city: 'Manchester'
+  name: "Queen Mary University of London",
+  city: "London",
+  country: 'UK',
+  zipcode: "E14NS",
+  address: "Mile End Rd",
+  description: "Queen Mary University of London is a public research university in London, England, and a member institution of the federal University of London",
+  image_url: 'https://ctfimages.intoglobal.com/xw2h6mjophtz/731sOVK2X4DrG83SK4jXAf/395ba54e3dc059a2fbb5b1fa5ca33cf3/Contentful_-_Campus_LifeUOM.jpg',
 )
+
+# Institution.create!(
+#   name: 'Manchester Metropolitan',
+#   address: "All Saints, All Saints Building, Manchester M15 6BH",
+#   description: 'Here to make an impact on Manchester, our nation and beyond, with a driving ambition to discover and disseminate knowledge, and make higher education accessible and beneficial to all those with the passion and ability to succeed.',
+#   image_url: 'https://ctfimages.intoglobal.com/xw2h6mjophtz/5cdMW38yv1E6OJStQXDzfT/2740a3c0a2bf39986b335e329b9fb736/Exterior_Manchester_Metropolitan_University.JPG',
+#   city: 'Manchester'
+# )
+
+# Institution.create!(
+#   name: 'The Royal Northern College of Music',
+#   address: "124 Oxford Rd, Manchester M13 9RD",
+#   description: 'The Royal Northern College of Music (RNCM) is a leading conservatoire located in Manchester, England. It is one of four conservatoires associated with the Associated Board of the Royal Schools of Music.',
+#   image_url: 'https://www.rncm.ac.uk/uploads/website-open-day-R.jpg',
+#   city: 'Manchester'
+# )
+
+# Institution.create!(
+#   name: 'Manchester School of Architecture',
+#   address: "Chatham Building, Cavendish St, Manchester M15 6BR",
+#   description: 'The Manchester School of Architecture (MSA) provide undergraduate and postgraduate architecture courses, jointly run by Manchester Metropolitan University and the University of Manchester. Students will benefit from the considerable resources available at both universities, along with teaching and research expertise.',
+#   image_url: 'https://i2-prod.manchestereveningnews.co.uk/incoming/article7451078.ece/ALTERNATES/s1200c/JS41979899.jpg',
+#   city: 'Manchester'
+# )
 
 Course.create(
   professor: Faker::Name.name,
@@ -52,7 +91,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
-  institution_id: 4
+  institution_id: [1, 2, 3, 4].sample
 )
 
 Course.create(
@@ -65,7 +104,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
-  institution_id: 2
+  institution_id: [1, 2, 3, 4].sample
 )
 
 Course.create(
@@ -78,7 +117,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
-  institution_id: 1
+  institution_id: [1, 2, 3, 4].sample
 )
 
 Course.create(
@@ -91,7 +130,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
-  institution_id: 3
+  institution_id: [1, 2, 3, 4].sample
 )
 
 Course.create(
@@ -104,7 +143,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
-  institution_id: 5
+  institution_id: [1, 2, 3, 4].sample
 )
 
 Course.create(
@@ -117,7 +156,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
-  institution_id: 4
+  institution_id: [1, 2, 3, 4].sample
 )
 
 Course.create(
@@ -130,7 +169,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
-  institution_id: 1
+  institution_id: [1, 2, 3, 4].sample
 )
 
 Course.create(
@@ -143,7 +182,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
-  institution_id: 2
+  institution_id: [1, 2, 3, 4].sample
 )
 
 Course.create(
@@ -156,7 +195,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
-  institution_id: 3
+  institution_id: [1, 2, 3, 4].sample
 )
 
 Course.create(
@@ -169,7 +208,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
-  institution_id: 5
+  institution_id: [1, 2, 3, 4].sample
 )
 
 Course.create(
@@ -182,7 +221,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
-  institution_id: 3
+  institution_id: [1, 2, 3, 4].sample
 )
 
 Course.create(
@@ -195,7 +234,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
-  institution_id: 1
+  institution_id: [1, 2, 3, 4].sample
 )
 
 Course.create(
@@ -208,7 +247,7 @@ Course.create(
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
   image_url: "https://www.msa.ac.uk/media/msaacuk/content/study/ba/year1/2021/ba1-photo-simons-chinatown.jpg",
-  institution_id: 4
+  institution_id: [1, 2, 3, 4].sample
 )
 
 Course.create(
@@ -221,7 +260,7 @@ Course.create(
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
   image_url: "https://www.msa.ac.uk/media/msaacuk/content/images/img18.jpg",
-  institution_id: 2
+  institution_id: [1, 2, 3, 4].sample
 )
 
 Course.create(
@@ -234,7 +273,7 @@ Course.create(
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
   image_url: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Orchestra.jpg",
-  institution_id: 3
+  institution_id: [1, 2, 3, 4].sample
 )
 
 Course.create(
@@ -247,7 +286,7 @@ Course.create(
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
   image_url: "https://www.rncm.ac.uk/uploads/Study-Here-image-2019.jpg",
-  institution_id: 3
+  institution_id: [1, 2, 3, 4].sample
 )
 
 Course.create(
@@ -260,7 +299,7 @@ Course.create(
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
   image_url: "https://wpp-cdn.azgw.mmu.ac.uk/course-images/headers/326/course-history.jpg",
-  institution_id: 2
+  institution_id: [1, 2, 3, 4].sample
 )
 
 Course.create(
@@ -273,7 +312,7 @@ Course.create(
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
   image_url: "https://wpp-cdn.azgw.mmu.ac.uk/course-images/department_course_images/159/CMDT-30470159-cropped.jpg",
-  institution_id: 2
+  institution_id: [1, 2, 3, 4].sample
 )
 
 Course.create(
@@ -286,7 +325,7 @@ Course.create(
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
   image_url: "https://wpp-cdn.azgw.mmu.ac.uk/course-images/headers/156/HUMAN-GEOG-shutterstock_255819034_cropped.jpg",
-  institution_id: 2
+  institution_id: [1, 2, 3, 4].sample
 )
 
 Course.create(
@@ -299,7 +338,7 @@ Course.create(
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
   image_url: "//contentlibrary.manchester.ac.uk/_coursemarketing/UMANC/2022/156/07808/U_Accounting_1400x450a-1.jpg",
-  institution_id: 1
+  institution_id: [1, 2, 3, 4].sample
 )
 
 Course.create(
@@ -312,7 +351,7 @@ Course.create(
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
   image_url: "//contentlibrary.manchester.ac.uk/_coursemarketing/UMANC/2022/132/06613/U_drama-and-english-lit-ba1400x450.jpg",
-  institution_id: 1
+  institution_id: [1, 2, 3, 4].sample
 )
 
 # 10.times do

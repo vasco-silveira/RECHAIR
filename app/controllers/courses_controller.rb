@@ -22,6 +22,18 @@ class CoursesController < ApplicationController
   def show
     @course = Course.find(params[:id])
     @booking = Booking.new
+    @institution = @course.institution
+    @markers = [{
+    lat: @institution.latitude,
+    lon: @institution.longitude
+    }]
+    # @markers2 = @markers1.to_json
+    # @markers = @institution.geocode.map do |i|
+    #   {
+    #     lat: i,
+    #     lon: i
+    #   }
+    # end
   end
 
   private

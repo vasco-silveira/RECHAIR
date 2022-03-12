@@ -25,11 +25,14 @@ import "bootstrap";
 import { initChatroomCable } from '../channels/chatroom_channel';
 import {successpopup} from '../components/successpopup';
 import {deletepopup} from '../components/deletepopup';
+import { initMapbox } from '../packs/map';
+
 document.addEventListener('turbolinks:load', () => {
 
   // Call your functions here, e.g:
 
   // initSelect2();
+  initMapbox();
   deletepopup()
   successpopup()
   initChatroomCable();
