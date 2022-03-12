@@ -11,7 +11,7 @@
   box-shadow: 0 0 15px rgba(177, 175, 175, 0.2);
   align-items: center;
   margin: 15px;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 .card-product img {
@@ -20,7 +20,7 @@
   object-fit: cover; // maybe it is better to use object-fit: contain
   padding: 15px;
   padding-bottom: 10px;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 .card-product h5 {
