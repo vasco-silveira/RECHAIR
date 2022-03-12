@@ -33,7 +33,13 @@
     <% end %>
 
     <%# Button to Ask Instructor a Question %>
-    
+    <%# <% if current_user.chatrooms.where(course_id: @course.id) == [] %>
+      <div class="booking-btn">
+        <%= simple_form_for [@course, Chatroom.new] do |f| %>
+          <%= f.submit "Ask Question", class: "btn btn-primary", id: "reservation-btn", data: {course_id: @course.id, user_id: current_user.id} %>
+        <% end %>
+      </div>
+    <%# <% end %>
 
   </div>
 

@@ -1,6 +1,7 @@
 class Course < ApplicationRecord
   belongs_to :institution
   has_many :bookings
+  has_one :chatroom
 
   validates :title, presence: true
   validates :professor, presence: true
