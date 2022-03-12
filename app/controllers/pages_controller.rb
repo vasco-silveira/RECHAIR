@@ -4,7 +4,9 @@ class PagesController < ApplicationController
     # random coment
     @courses = Course.order("rating DESC")
   end
-
+  def admin
+  end
+  
   def profile
     @user = current_user
     @bookings = current_user.bookings

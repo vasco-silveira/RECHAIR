@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :bookings, only: [ :index, :show, :edit, :update, :destroy ]
   resources :pages, only: [ :index, :edit, :update ]
   get 'profile', to: 'pages#profile'
+  get 'admin', to: 'pages#admin'
   resources :chatrooms, only: [ :show, :new, :create ] do
     resources :messages, only: :create
   end
