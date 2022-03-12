@@ -11,12 +11,12 @@ export const deletepopup = () => {
       event.preventDefault();
       Swal.fire({
         title: 'Are you sure?',
-        text: "You won't be able to revert this!",
+        text: "You won't be able to undo this!",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
+        confirmButtonText: 'Yes, remove chair!'
       }).then((result) => {
         if (result.isConfirmed) {
           const userId = deleteButton.dataset.userId;
@@ -31,8 +31,8 @@ export const deletepopup = () => {
 
             console.log("Request complete! response:", res);
             Swal.fire(
-              'Deleted!',
-              'Your file has been deleted.',
+              'Chair removed!',
+              'Your reservation has been cancelled.',
               'success'
             ).then((result) => {
               if (result.value) {
