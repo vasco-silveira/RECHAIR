@@ -23,8 +23,8 @@ import "bootstrap";
 
 // Internal imports, e.g:
 import { initChatroomCable } from '../channels/chatroom_channel';
-import {successpopup} from '../components/successpopup';
-import {deletepopup} from '../components/deletepopup';
+import {successpopup, deletepopup} from '../components/popup';
+// import {deletepopup} from '../components/deletepopup';
 import { initMapbox } from '../packs/map';
 
 document.addEventListener('turbolinks:load', () => {
@@ -33,7 +33,7 @@ document.addEventListener('turbolinks:load', () => {
 
   // initSelect2();
   initMapbox();
-  deletepopup()
-  successpopup()
+  deletepopup();
+  successpopup();
   initChatroomCable();
 });

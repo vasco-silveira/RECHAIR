@@ -43,3 +43,48 @@ export const successpopup = () => {
     });
   }
 }
+
+export const deletepopup = () => {
+  const deleteButtons = document.querySelectorAll(".delete-btn");
+    if (deleteButtons) {
+    deleteButtons.forEach(deleteButton => {
+      console.log(deleteButton)
+      deleteButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to undo this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, remove chair!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          const bookingId = deleteButton.dataset.bookingId;
+
+          fetch(`/bookings/${bookingId}`, {
+            method: "DELETE",
+            headers: { 'Content-Type': 'application/json' },
+            // body: JSON.stringify(data)
+          }).then(res => {
+
+            console.log("Request complete! response:", res);
+            Swal.fire(
+              'Chair removed!',
+              'Your reservation has been cancelled.',
+              'success'
+            ).then((result) => {
+              if (result.value) {
+                window.location.reload()
+              }
+            })
+
+            // window.location.href = `/courses/${courseId}`;
+          });
+        }
+      })
+    });
+    })
+  }
+}

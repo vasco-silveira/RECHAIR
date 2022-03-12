@@ -1,6 +1,6 @@
 <div class="container-fluid">
 
-  <h1>Hi, <%= @user.first_name %></h1>
+  <h1 id="profile-h1">Hi, <%= @user.first_name %></h1>
   <div class="flex-container">
     <div>
       <%= image_tag "Header-avatar-01.svg", class: "avatar-large" %>
@@ -10,57 +10,57 @@
       <p>Name: <%= @user.first_name %> <%= @user.last_name %></p>
       <p>Email: <%= @user.email %></p>
       <div>
-        <%= link_to "Edit your profile", edit_page_path(:id) %>
+        <%= link_to "Edit profile", edit_page_path(:id) %>
       </div>
     </div>
   </div>
   <hr>
 </div>
-<div class="container-fluid">
-  <h1>My Bookings</h1>
-  <h3>Let's see what courses you have coming up...</h3>
+
+<div id="wrapper" style="width:80%; margin:auto">
+
+  <div class="container-fluid">
+    <h1>My Bookings</h1>
+    <h3>Let's see what courses you have coming up...</h3>
 
 
-<div class="container-fluid">
-  <div class="cards">
-    <% @bookings.each do |booking| %>
-      <div>
-        <div class="card-product">
-          <div class="row">
-            <div class="col">
-              <img src="<%= booking.course.image_url %>">
+  <div class="container-fluid">
+    <div class="cards">
+      <% @bookings.each do |booking| %>
+        <div>
+          <div class="card-product d-flex flex-column justify-content-between">
+          <div>
+            <div class="row">
+              <div class="col">
+              <%= link_to course_path(booking.course) do %>
+                <img src="<%= booking.course.image_url %>">
+                <% end %>
+              </div>
             </div>
-          </div>
-          <%# Course title, Institution name, and Description %>
-          <div class="row">
-            <div class="col">
-              <div class="text-center">
-                <h5><%= booking.course.title %> </h5>
-                <h6>at <%= booking.course.institution.name %></h6> <%# add link to institution profile page %>
+            <%# Course title, Institution name, and Description %>
+            <div class="row">
+              <div class="col">
+                <div class="text-center">
+                <h5> <%= link_to booking.course.title, course_path(booking.course) %> </h5>
+                  <h6>at <%= link_to booking.course.institution.name, course_path(booking.course) %></h6> <%# add link to institution profile page %>
+                </div>
               </div>
             </div>
           </div>
-          <%# Professor name and Price %>
-          <div class="d-flex justify-content-around card-bottom padding-top-20px">
-            <%# <i class="fa-solid fa-books"></i> %>
-            <%# <i class="fa-solid fa-trash" id = "delete-btn"></i> %>
-
-            <%= link_to booking_path(booking) ,method: :delete, remote: true do %>
-            <%# <p><i class="fa-solid fa-trash" id = "delete-btn"></i></p> %>
-            <i class="fa-solid fa-trash" id ="delete-btn"></i>
-            <% end %>
-
+            <i class="fa-solid fa-trash delete-btn pb-3" data-booking-id="<%= booking.id %>"></i>
           </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
 
-<div class="container-fluid">
-  <div class="flex-container">
-    <div>
-      <%= link_to "Find a course to study", courses_path %>
+  <div class="container-fluid">
+    <div class="d-flex justify-content-center">
+      <div id="profile-discover-bttn">
+        <%# <%= link_to "Find a course to study", courses_path %>
+        <a class="btn btn-primary" href="/courses">Discover More</a>
+      </div>
     </div>
   </div>
 </div>
