@@ -31,7 +31,11 @@ export const successpopup = () => {
               'Chair confirmed!',
               "You're all set! You'll receive an email from your institution confirming your chair and further details on your chosen course. To manage your course, head over to your profile page",
               'success'
-            )
+            ).then((result) => {
+              if (result.value) {
+                window.location.reload()
+              }
+            })
             // window.location.href = `/courses/${courseId}`;
           });
         }

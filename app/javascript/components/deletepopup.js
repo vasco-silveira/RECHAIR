@@ -2,10 +2,12 @@ import Swal from 'sweetalert2'
 
 
 export const deletepopup = () => {
-    const deleteBtn = document.getElementById("delete-btn");
-    console.log(deleteBtn.dataset)
-  if (deleteBtn) {
-    deleteBtn.addEventListener("click", (event) => {
+    const deleteButtons = document.querySelectorAll("#delete-btn");
+    console.log(deleteButtons)
+  if (deleteButtons) {
+    deleteButtons.forEach(deleteButton => {
+      console.log(deleteButton)
+      deleteButton.addEventListener("click", (event) => {
       event.preventDefault();
       Swal.fire({
         title: 'Are you sure?',
@@ -17,8 +19,8 @@ export const deletepopup = () => {
         confirmButtonText: 'Yes, delete it!'
       }).then((result) => {
         if (result.isConfirmed) {
-          const userId = deleteBtn.dataset.userId;
-          const courseId = deleteBtn.dataset.courseId;
+          const userId = deleteButton.dataset.userId;
+          const courseId = deleteButton.dataset.courseId;
           const data = { user_id: userId, course_id: courseId };
 
           fetch(`/bookings/${courseId}`, {
@@ -32,12 +34,18 @@ export const deletepopup = () => {
               'Deleted!',
               'Your file has been deleted.',
               'success'
-            )
-            location.reload()
+            ).then((result) => {
+              if (result.value) {
+                window.location.reload()
+              }
+            })
+
             // window.location.href = `/courses/${courseId}`;
           });
         }
       })
     });
+    })
+
   }
 }
