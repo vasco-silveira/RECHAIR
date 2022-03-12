@@ -42,32 +42,10 @@
         <%= simple_form_for [@course, Booking.new] do |f| %>
           <%= f.submit "Reserve Chair", class: "btn btn-primary", id: "reservation-btn", data: {course_id: @course.id, user_id: current_user.id} %>
         <% end %>
-
         <%else%>
          <%= link_to "Join our roundtable", courses_path, class:"btn btn-primary"%>
       <% end %>
     </div>
-
-<!--       </div>
-    <% end %>
-
-<!--     <%# Button to Ask Instructor a Question %>
-    <%# <% if current_user.chatrooms.where(course_id: @course.id) == [] %>
-      <div class="booking-btn">
-        <%= simple_form_for [@course, Chatroom.new] do |f| %>
-          <%= f.submit "Ask Question", class: "btn btn-primary", id: "reservation-btn", data: {course_id: @course.id, user_id: current_user.id} %>
-        <% end %>
-      </div>
-    <%# <% end %>
- -->
-<!--   </div>
-
-  <hr>
-
-  <div class="description-section">
-    <p> <b>Description:</b> </p>
-    <p> <%= @course.description %> </p> -->
-
   </div>
 </div>
     <%# Button for discussion %>
