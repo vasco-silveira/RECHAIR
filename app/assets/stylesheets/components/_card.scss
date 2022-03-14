@@ -12,7 +12,7 @@
   align-items: center;
   margin: 15px;
   border-radius: 10px;
-  background: rgb(0,0,0);
+  background: #282D32;
   transition: background-color .4s;
   &:hover {
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 51%, rgba(41,41,41,1) 100%);
@@ -27,7 +27,7 @@
   align-items: center;
   margin: 15px;
   border-radius: 10px;
-  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 51%, rgba(41,41,41,1) 100%);
+  background: whitesmoke;
 
 
 }
