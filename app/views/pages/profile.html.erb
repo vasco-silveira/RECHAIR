@@ -1,12 +1,15 @@
+<div id="wrapper" style="width:80%; margin:auto">
 <div class="container-fluid">
 
   <h1 id="profile-h1">Hi, <%= @user.first_name %></h1>
+  <br><br>
   <div class="flex-container">
-    <div>
-      <%= image_tag "Header-avatar-01.svg", class: "avatar-large" %>
+    <div >
+      <img style="border-radius: 50%; length:200px; height:200px" src="<%= @user.profile_pic_url %>">
     </div>
 
     <div>
+
       <p>Name: <%= @user.first_name %> <%= @user.last_name %></p>
       <p>Email: <%= @user.email %></p>
       <div>
@@ -67,4 +70,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>
