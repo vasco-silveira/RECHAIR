@@ -1,5 +1,7 @@
 <h1>#<%= @chatroom.name %></h1>
-<div id="messages" data-chatroom-id="<%= @chatroom.id %>">
+<br><br>
+<div style="width:80%; margin:auto">
+<div id="messages" data-chatroom-id="<%= @chatroom.id %>" style="height:70vh; overflow:scroll;  overflow-x: hidden; background-color:grey; ">
   <% @chatroom.messages.each do |message| %>
     <%= render 'messages/message', message: message %>
   <% end %>
@@ -8,5 +10,5 @@
 <%# Simple form for messages %>
 <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
   <%= f.input :content, label: false, placeholder: "Message ##{@chatroom.name}" %>
-  <%= f.submit %>
 <% end %>
+</div>
