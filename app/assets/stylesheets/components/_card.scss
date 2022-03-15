@@ -23,17 +23,15 @@
 
 }
 
-.card-product-show {
-  overflow: hidden;
-  height: $card-height;
-  box-shadow: 0 0 15px rgba(177, 175, 175, 0.2);
-  align-items: center;
-  margin: 15px;
-  border-radius: 10px;
-  background: whitesmoke;
-
-
-}
+// .card-product-show {
+//   overflow: hidden;
+//   height: $card-height;
+//   box-shadow: 0 0 15px rgba(177, 175, 175, 0.2);
+//   align-items: center;
+//   margin: 15px;
+//   border-radius: 10px;
+//   background: whitesmoke;
+// }
 
 .card-product img {
   height: $card-height * (2/3); // $card-height is specified in stylesheets/config/_bootstrap_variables.scss
