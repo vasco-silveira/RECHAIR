@@ -7,15 +7,18 @@
 .card-product {
   overflow: hidden;
   height: $card-height;
-
-  box-shadow: 0 0 15px rgba(177, 175, 175, 0.2);
+  border-color: #282D32;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 5px 5px 12px -1px rgba(0,0,0,0.55);
   align-items: center;
   margin: 15px;
   border-radius: 10px;
   background: #282D32;
-  transition: background-color .4s;
+  transition: border-color .6s;
   &:hover {
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 51%, rgba(41,41,41,1) 100%);
+    border-color: $light-blue
+    // background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 51%, rgba(41,41,41,1) 100%);
   }
 
 }
