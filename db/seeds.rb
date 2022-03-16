@@ -1,3 +1,4 @@
+puts "Creating Users"
 User.create(
   first_name: 'Shotiko',
   last_name: 'Abramishvili',
@@ -34,6 +35,8 @@ User.create(
   password: "123456",
   admin: true
 )
+
+puts "Creating Institution"
 
 Institution.create!(
   name: 'University College London',
@@ -99,7 +102,7 @@ Institution.create!(
 #   city: 'Manchester'
 # )
 
-
+puts "Creating courses"
 
 Course.create(
   professor: Faker::Name.name,
@@ -113,6 +116,7 @@ Course.create(
   rating: (rand(3.0..5.0)).round(2),
   institution_id: [1, 2, 3, 4].sample
 )
+
 
 Course.create(
   professor: Faker::Name.name,
