@@ -433,11 +433,10 @@ Course.create(
   institution_id: [1, 2, 3, 4].sample
 )
 
-
-i = 0
-for a in 1..20 do
-Chatroom.create!(
-  name: 'Roundtable',
-  course_id: i += 1
-)
-end
+# i = 0
+# for a in 1..20 do
+# Chatroom.create!(
+#   name: 'Roundtable',
+#   course_id: i += 1
+# )
+# end
