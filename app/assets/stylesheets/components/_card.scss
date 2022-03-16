@@ -10,10 +10,10 @@
   border-color: #282D32;
   border-style: solid;
   border-width: 1px;
-  box-shadow: 5px 5px 12px -1px rgba(0,0,0,0.55);
+  box-shadow: 5px 5px 12px -1px rgba(0,0,0,0.25);
   align-items: center;
   margin: 15px;
-  border-radius: 10px;
+  border-radius: 5px;
   background: #282D32;
   transition: border-color .6s;
   &:hover {
@@ -39,7 +39,7 @@
   object-fit: cover; // maybe it is better to use object-fit: contain
   padding: 15px;
   padding-bottom: 10px;
-  border-radius: 25px;
+  border-radius: 15px;
 }
 
 .card-product h5 {
