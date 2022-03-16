@@ -437,6 +437,7 @@ Course.create(
   institution_id: [1, 2, 3, 4].sample
 )
 
+puts "courses created"
 # i = 0
 # for a in 1..20 do
 # Chatroom.create!(
