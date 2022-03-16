@@ -12,14 +12,21 @@
 @import "components/index";
 @import "pages/index";
 
+
 body {
   background-color: #202123;
+  color: $white
 }
 b {
   color: $white;
 }
 
 h1 {
+  color: $white;
+  font-family: 'IBM Plex Serif', serif;
+}
+
+h2 {
   color: $white;
   font-family: 'IBM Plex Serif', serif;
 }
@@ -44,4 +51,8 @@ h6 {
 
 p {
   color: $white;
+}
+
+.login-text {
+  padding-bottom: 10px;
 }
