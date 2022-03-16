@@ -30,10 +30,13 @@
 // }
 
 .banner {
+  background-image: url("invited-lecture-option1.jpeg");
   background-size: cover;
   background-position: center;
   background-color: transparent;
   padding: 50px 0;
+  height: 600px;
+  background-attachment: fixed;
 }
 
 .banner h1 {
