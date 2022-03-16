@@ -114,7 +114,7 @@ Course.create!(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
-  institution_id: [1, 2, 3, 4].sample
+  institution: Institution.all.sample
 )
 
 
@@ -128,7 +128,7 @@ Course.create!(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
-  institution_id: [1, 2, 3, 4].sample
+  institution: Institution.all.sample
 )
 
 Course.create!(
@@ -141,7 +141,7 @@ Course.create!(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
-  institution_id: [1, 2, 3, 4].sample
+  institution: Institution.all.sample
 )
 
 Course.create(
@@ -154,7 +154,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
-  institution_id: [1, 2, 3, 4].sample
+  institution: Institution.all.sample
 )
 
 Course.create(
@@ -167,7 +167,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
-  institution_id: [1, 2, 3, 4].sample
+  institution: Institution.all.sample
 )
 
 Course.create(
@@ -180,7 +180,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
-  institution_id: [1, 2, 3, 4].sample
+  institution: Institution.all.sample
 )
 
 Course.create(
@@ -193,7 +193,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
-  institution_id: [1, 2, 3, 4].sample
+  institution: Institution.all.sample
 )
 
 Course.create(
@@ -206,7 +206,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
-  institution_id: [1, 2, 3, 4].sample
+  institution: Institution.all.sample
 )
 
 Course.create(
@@ -219,7 +219,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
-  institution_id: [1, 2, 3, 4].sample
+  institution: Institution.all.sample
 )
 
 Course.create(
@@ -232,7 +232,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
-  institution_id: [1, 2, 3, 4].sample
+  institution: Institution.all.sample
 )
 
 Course.create(
@@ -245,7 +245,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
-  institution_id: [1, 2, 3, 4].sample
+  institution: Institution.all.sample
 )
 
 Course.create(
@@ -258,7 +258,7 @@ Course.create(
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
-  institution_id: [1, 2, 3, 4].sample
+  institution: Institution.all.sample
 )
 
 Course.create(
@@ -271,7 +271,7 @@ Course.create(
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
   image_url: "https://www.msa.ac.uk/media/msaacuk/content/study/ba/year1/2021/ba1-photo-simons-chinatown.jpg",
-  institution_id: [1, 2, 3, 4].sample
+  institution: Institution.all.sample
 )
 
 Course.create(
@@ -284,7 +284,7 @@ Course.create(
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
   image_url: "https://www.msa.ac.uk/media/msaacuk/content/images/img18.jpg",
-  institution_id: [1, 2, 3, 4].sample
+  institution: Institution.all.sample
 )
 
 Course.create(
@@ -297,7 +297,7 @@ Course.create(
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
   image_url: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Orchestra.jpg",
-  institution_id: [1, 2, 3, 4].sample
+  institution: Institution.all.sample
 )
 
 Course.create(
@@ -310,7 +310,7 @@ Course.create(
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
   image_url: "https://www.rncm.ac.uk/uploads/Study-Here-image-2019.jpg",
-  institution_id: [1, 2, 3, 4].sample
+  institution: Institution.all.sample
 )
 
 Course.create(
@@ -323,7 +323,7 @@ Course.create(
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
   image_url: "https://wpp-cdn.azgw.mmu.ac.uk/course-images/headers/326/course-history.jpg",
-  institution_id: [1, 2, 3, 4].sample
+  institution: Institution.all.sample
 )
 
 Course.create(
@@ -336,7 +336,7 @@ Course.create(
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
   image_url: "https://wpp-cdn.azgw.mmu.ac.uk/course-images/department_course_images/159/CMDT-30470159-cropped.jpg",
-  institution_id: [1, 2, 3, 4].sample
+  institution: Institution.all.sample
 )
 
 Course.create(
@@ -349,7 +349,7 @@ Course.create(
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
   image_url: "https://wpp-cdn.azgw.mmu.ac.uk/course-images/headers/156/HUMAN-GEOG-shutterstock_255819034_cropped.jpg",
-  institution_id: [1, 2, 3, 4].sample
+  institution: Institution.all.sample
 )
 
 Course.create(
@@ -362,7 +362,7 @@ Course.create(
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
   image_url: "//contentlibrary.manchester.ac.uk/_coursemarketing/UMANC/2022/156/07808/U_Accounting_1400x450a-1.jpg",
-  institution_id: [1, 2, 3, 4].sample
+  institution: Institution.all.sample
 )
 
 Course.create(
@@ -375,7 +375,7 @@ Course.create(
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
   image_url: "//contentlibrary.manchester.ac.uk/_coursemarketing/UMANC/2022/132/06613/U_drama-and-english-lit-ba1400x450.jpg",
-  institution_id: [1, 2, 3, 4].sample
+  institution: Institution.all.sample
 )
 
 # 10.times do
@@ -406,35 +406,14 @@ Course.create(
   professor: "Siegmund Nageltzman",
   title: "History of combat",
   description: "History 160 introduces the basic principles of strategic analysis, particularly with respect to armed conflict. This is done primarily by close study of a series of case studies ranging from the Peloponnesian and Punic wars, to the conquests of Napoleon and the unification of Germany, to the Russo-Japanese war and World War I. We also read some of the great analysts of warfare, such as Clausewitz and Sun Zi, as well as such theorists of sea power as Alfred Thayer Mahan and Sir Julian Corbett. Requirements include a midterm and standard final examination, as well as two short (3 page) papers and a course paper on a topic of your choice (10-15 pages).
-  Although this is an introductory course that assumes no previous knowledge, and is thus suitable for freshmen, the material is rarely taught anywhere, certainly not in 99% of colleges and universities, in spite of its absolutely fundamental importance for understanding history and the world. So higher level students will also find it of interest. Graduate students are welcome (see the Instructor about how to get graduate credit).
-  We meet Tuesday and Thursday 12:00-1:30 in College Hall 200
-\n
-  Lecture schedule:
-\n
-  Lecture 1: August 28, Introduction: Violence, War, and Strategy
-\n
-  Lecture 2: September 02, Origins of Violence: Biological or Cultural?
-\n
-\n
-  Lecture 3: September 04, Strategy According to Clausewitz: The Life of Clausewitz
-\n
-\n
-  Lecture 4: September 09, Strategy According to Clausewitz, The Essence of War
-
-  Lecture 5: September 11, Strategy According to Clausewitz, Operational Implications
-
-  Lecture 6: September 16, The Peloponnesian War: Prewar Plans
-
-  Lecture 7: September 18, The Peloponnesian War: Wartime Realities
-
-  Lecture 8: September 23 The Second Punic War: The Campaigns of Hannibal (edited) ",
+  Although this is an introductory course that assumes no previous knowledge, and is thus suitable for freshmen, the material is rarely taught anywhere, certainly not in 99% of colleges and universities, in spite of its absolutely fundamental importance for understanding history and the world. So higher level students will also find it of interest. Graduate students are welcome (see the Instructor about how to get graduate credit).",
   subject: "History",
   price: 150,
   start_date: Faker::Date.in_date_period,
   end_date: Faker::Date.in_date_period(year: 2023, month: 6),
   rating: (rand(3.0..5.0)).round(2),
   image_url: "https://www.historytoday.com/sites/default/files/articles/Combat_des_Trente_new.jpg",
-  institution_id: [1, 2, 3, 4].sample
+  institution: Institution.all.sample
 )
 
 puts "courses created"
