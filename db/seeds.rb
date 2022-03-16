@@ -1,5 +1,5 @@
 puts "Creating Users"
-User.create(
+User.create!(
   first_name: 'Shotiko',
   last_name: 'Abramishvili',
   email: "shotiko@email.com",
@@ -104,7 +104,7 @@ Institution.create!(
 
 puts "Creating courses"
 
-Course.create(
+Course.create!(
   professor: Faker::Name.name,
   title: 'Lady Gaga and Sociology',
   description: "The central objective is to unravel some of the sociologically relevant dimensions of the fame of Lady Gaga.",
@@ -118,7 +118,7 @@ Course.create(
 )
 
 
-Course.create(
+Course.create!(
   professor: Faker::Name.name,
   title: "The Physics of Star Trek",
   description: "If you're ever wondered whether or not the USS Enterprise would have actually been capable of flight, Santa Clara University might be the school for you.",
@@ -131,7 +131,7 @@ Course.create(
   institution_id: [1, 2, 3, 4].sample
 )
 
-Course.create(
+Course.create!(
   professor: Faker::Name.name,
   title: 'Planetary Science',
   description: 'This class focuses on everything regarding space. With a particular focus on the solar system and extraterrestrial material, space missions and the technology used, this class will be sure to keep you engaged.',
