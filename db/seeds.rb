@@ -424,4 +424,5 @@ Chatroom.create!(
   course_id: i += 1
 )
 end
+
 puts "chatrooms created"
