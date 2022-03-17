@@ -417,10 +417,11 @@ Course.create(
 )
 
 puts "courses created"
-# i = 0
-# for a in 1..20 do
-# Chatroom.create!(
-#   name: 'Roundtable',
-#   course_id: i += 1
-# )
-# end
+i = 0
+for a in 1..22 do
+Chatroom.create!(
+  name: 'Roundtable',
+  course_id: i += 1
+)
+end
+puts "chatrooms created"
