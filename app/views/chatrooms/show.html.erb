@@ -1,16 +1,21 @@
-<h1>#<%= @chatroom.name %></h1>
-<br><br>
-<div style="width:80%; margin:auto">
-<div id="messages" data-chatroom-id="<%= @chatroom.id %>" style="height:70vh; overflow:scroll;  overflow-x: hidden; background-color:grey; ">
-  <% @chatroom.messages.each do |message| %>
-    <%= render 'messages/message', message: message %>
-  <% end %>
-</div>
+<div style="width:50%; margin:auto">
+  <h2>Join the #<%= @chatroom.name %></h2>
+  <h5>for <%= @course.title %> </h5>
+  <br>
+  <div style="border-radius:40px; background-color:#282D32; box-shadow: 5px 5px 12px -1px rgba(0,0,0,0.25);">
+    <div id="messages" data-chatroom-id="<%= @chatroom.id %>" style="height:70vh; overflow:scroll;  overflow-x: hidden; padding:40px;">
+      <% @chatroom.messages.each do |message| %>
+        <%= render 'messages/message', message: message %>
+      <% end %>
+    </div>
 
-<%# Simple form for messages %>
-<%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
-<%= f.input :content, label: false, placeholder: "Message ##{@chatroom.name}" %>
-<%= f.submit%>
-
-<% end %>
+    <%# Simple form for messages %>
+    <div class="message-form-wrapper">
+      <%= simple_form_for [ @chatroom, @message ], html: { autocomplete: 'off' }, remote: true do |f| %>
+      <%= f.input :content, label: false, placeholder: "Message ##{@chatroom.name} for #{@course.title}" %>
+      <% end %>
+    </div>
+  </div>
+  <br>
+  <br>
 </div>

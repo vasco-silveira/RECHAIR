@@ -28,7 +28,7 @@ h1 {
 
 h2 {
   color: $white;
-  font-family: 'IBM Plex Serif', serif;
+  font-family: 'Inter', sans-serif;
 }
 
 h3 {
@@ -55,4 +55,8 @@ p {
 
 .login-text {
   padding-bottom: 10px;
+}
+
+i.author {
+  font-size: 10px;
 }
