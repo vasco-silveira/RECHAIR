@@ -69,7 +69,7 @@ Institution.create!(
 )
 
 Institution.create!(
-  name: "Queen Mary University of London",
+  name: "Queen Mary",
   city: "London",
   country: 'UK',
   zipcode: "E14NS",
@@ -159,7 +159,7 @@ Course.create(
 
 Course.create(
   professor: Faker::Name.name,
-  title: 'The Genre Bending Art of Essaying',
+  title: 'Genre Art of Essaying',
   description: 'This class will be sure to change your perception of essay writing, maybe even help you develop and enjoy writing them. With a combination of research and workshops, this module is a really interesting take on traditional creative writing topics.',
   subject: 'Arts',
   image_url: 'https://oneclassblog.com/wp-content/uploads/2018/12/business-1868015_1920-1-1024x683.jpg',
@@ -198,7 +198,7 @@ Course.create(
 
 Course.create(
   professor: Faker::Name.name,
-  title: 'The Scottish Enlightenment: Ideas and Influences',
+  title: 'Scottish Enlightenment',
   description: 'When in Glasgow, learn about the Scottish Enlightenment. This class will introduce students to the movement and how it has had a lasting influence on the country. It also enables students to visit important Scottish cultural centres, museums and libraries.',
   subject: 'Philosophy' ,
   image_url: 'https://i2.wp.com/oneclassblog.com/wp-content/uploads/2018/12/glasgow-2997986_1920.jpg?fit=840%2C556&ssl=1',
@@ -211,7 +211,7 @@ Course.create(
 
 Course.create(
   professor: Faker::Name.name,
-  title: 'Wireless Sensor Networks ',
+  title: 'Wireless Sensor Networks',
   description: "This class is an introduction to a fundamental part of modern society. Learn all about embedded systems and wireless sensor networks. By the end of the class, you'll have a key understanding of every aspect of the applications and technology.",
   subject: 'Engineering',
   image_url: 'https://i2.wp.com/oneclassblog.com/wp-content/uploads/2018/12/algorithms-10-00080-g001.png?fit=840%2C449&ssl=1',
@@ -224,7 +224,7 @@ Course.create(
 
 Course.create(
   professor: Faker::Name.name,
-  title: "Writing for Performance ",
+  title: "Writing for Performance",
   description: "Contemporary writing for performance is a highly sought-after skill. You will develop your own writing ability, conduct an individual project and explore other pieces of performance writing. You will finish this cool class with all the skills and techniques needed for live performance.",
   subject: "Drama",
   image_url: 'https://oneclassblog.com/wp-content/uploads/2018/12/Hamlin_theatre.jpg' ,
@@ -250,7 +250,7 @@ Course.create(
 
 Course.create(
   professor: Faker::Name.name,
-  title: 'Mandarin Advanced Translation',
+  title: 'Mandarin Translation',
   description: "As part of Glasgow's SMLC Translations Studies Programme, this class will give students all the necessary training and practice needed to effectively translate from English to Mandarin. This is a super special class, courtesy of the University's unique programme.",
   subject: 'Linguistics',
   image_url: 'https://i0.wp.com/oneclassblog.com/wp-content/uploads/2018/12/language-2345801_1920-1.jpg?fit=840%2C630&ssl=1',
@@ -315,7 +315,7 @@ Course.create(
 
 Course.create(
   professor: "Henry Rubicon",
-  title: "Case Studies in Global History",
+  title: "Global History",
   description: "This unit examines key themes and sources for the study of history in a global context. Students can explore an areas related to their potential bracketed award so topics and subjects on offer can vary year to year.",
   subject: "History",
   price: 150,
@@ -328,7 +328,7 @@ Course.create(
 
 Course.create(
   professor: "Stats McStatterton",
-  title: "Probability Theory and Statistics",
+  title: "Probability Theory",
   description: "This unit teaches you basic statistics in a style that will prepare you for second year work, making use of relevant statistical software. It covers descriptive statistics, probability and statistical applications.",
   subject: "Mathematics",
   price: 150,
@@ -354,7 +354,7 @@ Course.create(
 
 Course.create(
   professor: "Neville D'Audit",
-  title: "Quantitative Methods for Accounting and Finance",
+  title: "Quantitative Methods",
   description: "The course aims to allow students to understand quantitative and statistical modelling and analytical techniques to a level necessary for quantitative finance.",
   subject: "Accounting",
   price: 150,
@@ -367,7 +367,7 @@ Course.create(
 
 Course.create(
   professor: "Silvia Greyscale",
-  title: "Introduction to Early and Classical Cinema",
+  title: "Intro to Cinema",
   description: "This course provides students with a grounding in the origins of film as a creative medium and introduces them to major developments in early and classical film history.",
   subject: "Drama and English Literature",
   price: 150,
@@ -404,7 +404,7 @@ Course.create(
 
 Course.create(
   professor: "Siegmund Nageltzman",
-  title: "History of combat",
+  title: "History of Combat",
   description: "History 160 introduces the basic principles of strategic analysis, particularly with respect to armed conflict. This is done primarily by close study of a series of case studies ranging from the Peloponnesian and Punic wars, to the conquests of Napoleon and the unification of Germany, to the Russo-Japanese war and World War I. We also read some of the great analysts of warfare, such as Clausewitz and Sun Zi, as well as such theorists of sea power as Alfred Thayer Mahan and Sir Julian Corbett. Requirements include a midterm and standard final examination, as well as two short (3 page) papers and a course paper on a topic of your choice (10-15 pages).
   Although this is an introductory course that assumes no previous knowledge, and is thus suitable for freshmen, the material is rarely taught anywhere, certainly not in 99% of colleges and universities, in spite of its absolutely fundamental importance for understanding history and the world. So higher level students will also find it of interest. Graduate students are welcome (see the Instructor about how to get graduate credit).",
   subject: "History",
