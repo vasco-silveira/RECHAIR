@@ -1,3 +1,4 @@
+
 puts "Creating Users"
 User.create!(
   first_name: 'Shotiko',
