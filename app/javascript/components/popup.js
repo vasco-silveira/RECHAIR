@@ -14,7 +14,7 @@ export const successpopup = () => {
         showCancelButton: true,
         cancelButtonColor: '#d33',
         confirmButtonColor: '#3085d6',
-        confirmButtonText: 'confirm',
+        confirmButtonText: 'Confirm',
       }).then((result) => {
         if (result.isConfirmed) {
           const userId = reservationBtn.dataset.userId;
