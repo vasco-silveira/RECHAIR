@@ -1,7 +1,8 @@
 <div class="message-container" id="message-<%= message.id %>">
+  <p style="margin-bottom: 4px"><%= message.user.first_name %> <%= message.user.last_name %> wrote:</p>
+  <h5 style="background-color: #8EB1C7; border-radius: 15px; padding-left: 20px; padding-right: 20px; padding-top:2px; padding-bottom:2px; width: fit-content; margin-left:10px"><%= message.content %></h5>
   <i class="author">
-    <span><%= message.user.first_name %> <%= message.user.last_name %></span>
-    <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
+  <p class="message-date" style="margin-left:10px"><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></p>
   </i>
-  <p><%= message.content %></p>
+  <br>
 </div>

@@ -7,7 +7,7 @@ class CoursesController < ApplicationController
       courses_by_query = Course.search_by_title_and_description(params[:query])
       @courses = courses_by_query
       if params[:institution].present? && params[:institution][:id].present?
-        @courses =  courses_by_query.where(institution: params[:institution][:id])
+        @courses =  courses_by_query(institution: params[:institution][:id])
       end
     elsif params[:institution].present? && params[:institution][:id].present?
       @courses =  Course.all.where(institution: params[:institution][:id])

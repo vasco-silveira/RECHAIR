@@ -1,9 +1,10 @@
 class ChatroomsController < ApplicationController
   before_action :set_user
-  
+
   def show
     @chatroom = Chatroom.find(params[:id])
     @message = Message.new
+    @course = Course.find(@chatroom.course_id)
   end
 
   def new
