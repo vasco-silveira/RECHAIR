@@ -3,23 +3,27 @@
 
   <h3 id="profile-h1">Hi, <%= @user.first_name %></h3>
   <br><br>
+
+  <div style="background:#F4F4F4; border-radius:25px; height:110%">
   <div class="flex-container">
     <div >
-      <img style="border-radius: 50%; length:200px; height:200px" src="<%= @user.profile_pic_url %>">
+      <img style="border-radius: 50%; length:200px; height:200px; padding-left:20px" src="<%= @user.profile_pic_url %>">
     </div>
 
     <div>
 
-      <p>Name: <%= @user.first_name %> <%= @user.last_name %></p>
-      <p>Email: <%= @user.email %></p>
+      <p style="color: black; font-size: 30px;">Name: <%= @user.first_name %> <%= @user.last_name %></p>
+      <p style="color: black; font-size: 20px">Email: <%= @user.email %></p>
       <div>
         <%= link_to "Edit profile", edit_page_path(:id) %>
       </div>
     </div>
   </div>
-  <hr>
 </div>
+</div>
+  <hr>
 
+</div>
 <div>
 
   <div class="container-fluid">
